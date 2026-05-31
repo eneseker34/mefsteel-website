@@ -465,6 +465,30 @@ function bindLightbox() {
   });
 }
 
+// ===== GALERİ FİLTRE + LİGHTBOX =====
+(function() {
+  const filterBtns = document.querySelectorAll('.gf-btn');
+  const items = document.querySelectorAll('.gallery-item');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      items.forEach(item => {
+        const show = cat === 'tumu' || item.dataset.cat === cat;
+        item.classList.toggle('hidden', !show);
+      });
+    });
+  });
+
+  // Lightbox
+  const imgs = [...items].map(i => i.dataset.img);
+  items.forEach((item, idx) => {
+    item.addEventListener('click', () => openLightbox(imgs, idx));
+  });
+})();
+
 // ===== CONTACT FORM =====
 const form = document.getElementById('contact-form');
 if (form) {
