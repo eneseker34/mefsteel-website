@@ -1,3 +1,117 @@
+// ===== WEBGL SHADER =====
+(function initShader(canvasId, opacity) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) return;
+  const gl = canvas.getContext('webgl');
+  if (!gl) return;
+
+  const vert = `attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}`;
+  const frag = `
+    precision highp float;
+    uniform float iTime;
+    uniform vec2 iRes;
+    mat2 rot(float a){float c=cos(a),s=sin(a);return mat2(c,-s,s,c);}
+    float vary(vec2 v1,vec2 v2,float st,float sp){return sin(dot(normalize(v1),normalize(v2))*st+iTime*sp)/100.;}
+    vec3 circle(vec2 uv,vec2 c,float r,float w){
+      vec2 d=c-uv;float l=length(d);
+      l+=vary(d,vec2(0.,1.),5.,2.);
+      l-=vary(d,vec2(1.,0.),5.,2.);
+      return vec3(smoothstep(r-w,r,l)-smoothstep(r,r+w,l));
+    }
+    void main(){
+      vec2 uv=gl_FragCoord.xy/iRes;
+      uv.x*=1.5;uv.x-=.25;
+      float m=0.;
+      vec2 c=vec2(.5);
+      m+=circle(uv,c,.35,.035).r;
+      m+=circle(uv,c,.332,.01).r;
+      m+=circle(uv,c,.368,.005).r;
+      vec2 v=rot(iTime)*uv;
+      vec3 fg=vec3(v.x,v.y,.7-v.y*v.x);
+      vec3 col=mix(vec3(0.),fg,m);
+      col=mix(col,vec3(1.),circle(uv,c,.35,.003).r);
+      gl_FragColor=vec4(col,1.);
+    }`;
+
+  const mkShader = (type, src) => {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src); gl.compileShader(s); return s;
+  };
+  const prog = gl.createProgram();
+  gl.attachShader(prog, mkShader(gl.VERTEX_SHADER, vert));
+  gl.attachShader(prog, mkShader(gl.FRAGMENT_SHADER, frag));
+  gl.linkProgram(prog); gl.useProgram(prog);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW);
+  const ap = gl.getAttribLocation(prog, 'a');
+  gl.enableVertexAttribArray(ap);
+  gl.vertexAttribPointer(ap, 2, gl.FLOAT, false, 0, 0);
+
+  const tLoc = gl.getUniformLocation(prog, 'iTime');
+  const rLoc = gl.getUniformLocation(prog, 'iRes');
+
+  const resize = () => {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    gl.viewport(0, 0, canvas.width, canvas.height);
+  };
+  resize();
+  window.addEventListener('resize', resize);
+
+  let raf;
+  const render = t => {
+    gl.uniform1f(tLoc, t * 0.001);
+    gl.uniform2f(rLoc, canvas.width, canvas.height);
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+    raf = requestAnimationFrame(render);
+  };
+  raf = requestAnimationFrame(render);
+})('shader-canvas');
+
+(function(){ document.getElementById('shader-canvas') && initShader('pricing-shader'); })();
+
+// Hero shader zaten başlatıldı, pricing shader'ı da başlat
+(function initPricingShader() {
+  const canvas = document.getElementById('pricing-shader');
+  if (!canvas) return;
+  const gl = canvas.getContext('webgl');
+  if (!gl) return;
+  const vert = `attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}`;
+  const frag = `
+    precision highp float;
+    uniform float iTime;uniform vec2 iRes;
+    mat2 rot(float a){float c=cos(a),s=sin(a);return mat2(c,-s,s,c);}
+    float vary(vec2 v1,vec2 v2,float st,float sp){return sin(dot(normalize(v1),normalize(v2))*st+iTime*sp)/100.;}
+    vec3 circle(vec2 uv,vec2 c,float r,float w){vec2 d=c-uv;float l=length(d);l+=vary(d,vec2(0.,1.),5.,2.);l-=vary(d,vec2(1.,0.),5.,2.);return vec3(smoothstep(r-w,r,l)-smoothstep(r,r+w,l));}
+    void main(){vec2 uv=gl_FragCoord.xy/iRes;uv.x*=1.5;uv.x-=.25;float m=0.;vec2 c=vec2(.5);m+=circle(uv,c,.35,.035).r;m+=circle(uv,c,.332,.01).r;m+=circle(uv,c,.368,.005).r;vec2 v=rot(iTime)*uv;vec3 fg=vec3(v.x,v.y,.7-v.y*v.x);vec3 col=mix(vec3(0.055,0.067,0.082),fg,m);col=mix(col,vec3(1.),circle(uv,c,.35,.003).r);gl_FragColor=vec4(col,1.);}`;
+  const mk = (t,s)=>{const sh=gl.createShader(t);gl.shaderSource(sh,s);gl.compileShader(sh);return sh;};
+  const p=gl.createProgram();gl.attachShader(p,mk(gl.VERTEX_SHADER,vert));gl.attachShader(p,mk(gl.FRAGMENT_SHADER,frag));gl.linkProgram(p);gl.useProgram(p);
+  const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]),gl.STATIC_DRAW);
+  const ap=gl.getAttribLocation(p,'a');gl.enableVertexAttribArray(ap);gl.vertexAttribPointer(ap,2,gl.FLOAT,false,0,0);
+  const tL=gl.getUniformLocation(p,'iTime'),rL=gl.getUniformLocation(p,'iRes');
+  const resize=()=>{canvas.width=canvas.offsetWidth;canvas.height=canvas.offsetHeight;gl.viewport(0,0,canvas.width,canvas.height);};
+  resize();window.addEventListener('resize',resize);
+  const render=t=>{gl.uniform1f(tL,t*.001);gl.uniform2f(rL,canvas.width,canvas.height);gl.drawArrays(gl.TRIANGLES,0,6);requestAnimationFrame(render);};
+  requestAnimationFrame(render);
+})();
+
+// ===== RİPPLE BUTONU =====
+document.querySelectorAll('.ripple-btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top  - size / 2;
+    const ripple = document.createElement('span');
+    ripple.className = 'ripple';
+    ripple.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`;
+    this.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 600);
+  });
+});
+
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {

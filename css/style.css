@@ -991,6 +991,187 @@ section { padding: 100px 5%; }
   font-weight: 600;
 }
 
+/* ===== SHADER CANVAS (HERO) ===== */
+#shader-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+/* ===== PRICING / PAKETLER ===== */
+.pricing-section {
+  position: relative;
+  padding: 100px 5%;
+  background: var(--navy2);
+  overflow: hidden;
+  text-align: center;
+}
+
+#pricing-shader {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.pricing-inner { position: relative; z-index: 1; }
+
+.pricing-header { margin-bottom: 56px; }
+.pricing-header .section-label { justify-content: center; }
+.pricing-header .section-title { margin: 0 auto; }
+.pricing-header .section-desc { margin: 16px auto 0; }
+
+.pricing-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 36px 28px;
+  flex: 1;
+  min-width: 260px;
+  max-width: 320px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: var(--transition);
+  text-align: left;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(244,162,97,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.pricing-card-popular {
+  transform: scale(1.05);
+  border-color: rgba(100,220,255,0.25);
+  background: linear-gradient(135deg, rgba(255,255,255,0.13) 0%, rgba(255,255,255,0.06) 100%);
+  box-shadow: 0 0 40px rgba(100,220,255,0.08);
+}
+
+.pricing-card-popular:hover { transform: scale(1.05) translateY(-6px); }
+
+.pricing-popular-badge {
+  position: absolute;
+  top: -14px; right: 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+.pricing-plan {
+  font-size: 2.2rem;
+  font-weight: 200;
+  letter-spacing: -1px;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.pricing-desc {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.pricing-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
+.pricing-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12) 30%, rgba(255,255,255,0.22) 50%, rgba(255,255,255,0.12) 70%, transparent);
+  margin-bottom: 20px;
+}
+
+.pricing-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 28px;
+}
+
+.check-icon {
+  color: #4dd9f0;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.pricing-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-btn-primary {
+  background: linear-gradient(135deg, #4dd9f0, #2563eb);
+  color: var(--white);
+  box-shadow: 0 4px 20px rgba(77,217,240,0.25);
+}
+
+.pricing-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(77,217,240,0.4);
+}
+
+.pricing-btn-secondary {
+  background: rgba(255,255,255,0.08);
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.pricing-btn-secondary:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-2px);
+}
+
+/* Ripple efekt */
+.ripple-btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transform: scale(0);
+  animation: rippleAnim 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes rippleAnim {
+  to { transform: scale(4); opacity: 0; }
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: #080F18;

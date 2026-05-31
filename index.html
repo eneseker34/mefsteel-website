@@ -21,6 +21,7 @@
 
   <nav>
     <a href="#hizmetler">Hizmetler</a>
+    <a href="#paketler">Paketler</a>
     <a href="#projeler">Projeler</a>
     <a href="#hakkimizda">Hakkımızda</a>
     <a href="#iletisim" class="nav-cta">İletişim</a>
@@ -33,11 +34,11 @@
 
 <!-- ===== HERO ===== -->
 <section id="hero">
+  <canvas id="shader-canvas"></canvas>
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
 
   <div class="hero-image">
-    <!-- Hero arka plan fotoğrafı: images/hero/hero-bg.jpg -->
     <img src="images/hero/hero-bg.jpg" alt="MefSteel Yapı" onerror="this.style.display='none'">
   </div>
 
@@ -145,6 +146,67 @@
       <div class="service-arrow">Detaylı Bilgi <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
     </div>
 
+  </div>
+</section>
+
+<!-- ===== PAKETLER ===== -->
+<section id="paketler" class="pricing-section">
+  <canvas id="pricing-shader"></canvas>
+  <div class="pricing-inner">
+    <div class="pricing-header fade-up">
+      <div class="section-label" style="justify-content:center">Hizmet Paketleri</div>
+      <h2 class="section-title">Projenize Uygun<br>Paketi Seçin</h2>
+      <p class="section-desc" style="margin:16px auto 0">Her ölçekteki projeye uygun çözümler sunuyoruz. Detaylı fiyat teklifi için bizimle iletişime geçin.</p>
+    </div>
+
+    <div class="pricing-cards fade-up delay-2">
+
+      <div class="pricing-card">
+        <div class="pricing-plan">Temel</div>
+        <p class="pricing-desc">Küçük ölçekli konut ve ek yapılar için ideal başlangıç paketi.</p>
+        <div class="pricing-price">Teklif Al</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><span class="check-icon">✓</span> Çelik karkas hesabı</li>
+          <li><span class="check-icon">✓</span> Malzeme listesi</li>
+          <li><span class="check-icon">✓</span> Temel montaj</li>
+          <li><span class="check-icon">✓</span> 50 m²'ye kadar</li>
+        </ul>
+        <a href="#iletisim" class="pricing-btn pricing-btn-secondary ripple-btn">İletişime Geç</a>
+      </div>
+
+      <div class="pricing-card pricing-card-popular">
+        <div class="pricing-popular-badge">En Çok Tercih Edilen</div>
+        <div class="pricing-plan">Standart</div>
+        <p class="pricing-desc">Konut ve ticari projeler için eksiksiz çözüm paketi.</p>
+        <div class="pricing-price">Teklif Al</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><span class="check-icon">✓</span> Çelik karkas + panel sistemi</li>
+          <li><span class="check-icon">✓</span> Tam metraj hesabı</li>
+          <li><span class="check-icon">✓</span> Cephe & çatı</li>
+          <li><span class="check-icon">✓</span> Isı & ses yalıtımı</li>
+          <li><span class="check-icon">✓</span> 50–300 m²</li>
+        </ul>
+        <a href="#iletisim" class="pricing-btn pricing-btn-primary ripple-btn">İletişime Geç</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-plan">Kurumsal</div>
+        <p class="pricing-desc">Büyük ölçekli ticari ve endüstriyel projeler için tam kapsamlı hizmet.</p>
+        <div class="pricing-price">Teklif Al</div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li><span class="check-icon">✓</span> Anahtar teslim proje</li>
+          <li><span class="check-icon">✓</span> Statik hesap & rapor</li>
+          <li><span class="check-icon">✓</span> Proje yönetimi</li>
+          <li><span class="check-icon">✓</span> Öncelikli destek</li>
+          <li><span class="check-icon">✓</span> 300 m² ve üzeri</li>
+        </ul>
+        <a href="#iletisim" class="pricing-btn pricing-btn-secondary ripple-btn">İletişime Geç</a>
+      </div>
+
+    </div>
   </div>
 </section>
 
