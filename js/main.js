@@ -243,7 +243,7 @@ const CS = {
     this.items = projects;
 
     this.fan.innerHTML = projects.map((p, i) => {
-      const img  = 'images/projeler/' + p.dosya;
+      const img  = p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya;
       const kat  = p.kategori || 'diger';
       const etiket = KATEGORI_ETIKET[kat] || kat;
       const isim = p.isim || p.dosya.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
@@ -277,7 +277,7 @@ const CS = {
         if (this.dragging) return;
         const i = +card.dataset.i;
         if (i === this.active) {
-          openLightbox(this.items.map(p => 'images/projeler/' + p.dosya), i);
+          openLightbox(this.items.map(p => p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya), i);
         } else {
           this.go(i);
         }
