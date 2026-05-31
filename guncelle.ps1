@@ -1,9 +1,10 @@
 # MefSteel Website Guncelleme Scripti
-# Fotograf klasorundan resimleri kopyalar, manifest.json uretir, GitHub'a push eder
+# Kategori klasorlerinden fotograflari kopyalar, Excel bilgi foylerini okur,
+# manifest.json uretir, GitHub push eder -> Vercel otomatik deploy eder
 
-$FOTOLAR_KLASORU = "D:\00 SIRKET DOSYALARI\GENEL SIRKET DOSYALARI\WEB SITESI FOTOLARI"
-$WEBSITE_KLASORU = "C:\mefsteel-website"
-$NODE_EXE        = "C:\Program Files\nodejs\node.exe"
+$FOTOLAR = "D:\00 SIRKET DOSYALARI\GENEL SIRKET DOSYALARI\WEB SITESI FOTOLARI"
+$WEBSITE  = "C:\mefsteel-website"
+$PYTHON   = "C:\Users\Enes\AppData\Local\Programs\Python\Python312\python.exe"
 
 Write-Host ""
 Write-Host "=====================================" -ForegroundColor Cyan
@@ -11,119 +12,135 @@ Write-Host "  MefSteel Website Guncelleniyor..." -ForegroundColor Cyan
 Write-Host "=====================================" -ForegroundColor Cyan
 Write-Host ""
 
-# --- 1. FOTOGRAF KLASORU KONTROL ---
-if (-not (Test-Path $FOTOLAR_KLASORU)) {
-    Write-Host "[UYARI] Fotograf klasoru bulunamadi:" -ForegroundColor Yellow
-    Write-Host "  $FOTOLAR_KLASORU" -ForegroundColor Yellow
-    Write-Host "  Lutfen klasoru olusturun ve fotograflari ekleyin." -ForegroundColor Yellow
-} else {
-    Write-Host "[1/4] Fotograflar kopyalaniyor..." -ForegroundColor Green
+# --- 1. FOTOGRAFLARI KOPYALA ---
+Write-Host "[1/4] Fotograflar kopyalaniyor..." -ForegroundColor Green
 
-    $KATEGORI_ESLESTIRME = @{
-        "projeler"   = "$WEBSITE_KLASORU\images\projeler"
-        "hero"       = "$WEBSITE_KLASORU\images\hero"
-        "hakkimizda" = "$WEBSITE_KLASORU\images\hakkimizda"
-    }
+$KATEGORILER = @("konut","ticari","endustriyel")
+$toplam = 0
 
-    foreach ($klasor in $KATEGORI_ESLESTIRME.Keys) {
-        $kaynak = Join-Path $FOTOLAR_KLASORU $klasor
-        $hedef  = $KATEGORI_ESLESTIRME[$klasor]
-        if (Test-Path $kaynak) {
-            New-Item -ItemType Directory -Force $hedef | Out-Null
-            $dosyalar = Get-ChildItem $kaynak -File -Include "*.jpg","*.jpeg","*.png","*.webp"
-            foreach ($dosya in $dosyalar) {
-                $hedefDosya = Join-Path $hedef $dosya.Name
-                if (-not (Test-Path $hedefDosya) -or (Get-Item $dosya.FullName).LastWriteTime -gt (Get-Item $hedefDosya).LastWriteTime) {
-                    Copy-Item $dosya.FullName $hedefDosya -Force
-                    Write-Host "   Kopyalandi: $klasor\$($dosya.Name)" -ForegroundColor Gray
-                }
-            }
-        }
-    }
+foreach ($kat in $KATEGORILER) {
+    $kaynak = Join-Path $FOTOLAR $kat
+    $hedef  = Join-Path $WEBSITE "images\projeler\$kat"
 
-    # Kok klasordeki fotograflar projeler'e gider
-    $kokDosyalar = Get-ChildItem $FOTOLAR_KLASORU -File -Include "*.jpg","*.jpeg","*.png","*.webp"
-    foreach ($dosya in $kokDosyalar) {
-        $hedefDosya = "$WEBSITE_KLASORU\images\projeler\$($dosya.Name)"
-        if (-not (Test-Path $hedefDosya) -or (Get-Item $dosya.FullName).LastWriteTime -gt (Get-Item $hedefDosya).LastWriteTime) {
-            Copy-Item $dosya.FullName $hedefDosya -Force
-            Write-Host "   Kopyalandi: projeler\$($dosya.Name)" -ForegroundColor Gray
-        }
+    if (-not (Test-Path $kaynak)) { continue }
+    New-Item -ItemType Directory -Force $hedef | Out-Null
+
+    # Alt klasorlerdeki fotograflari da kopyala
+    $dosyalar = Get-ChildItem $kaynak -Recurse -File | Where-Object { $_.Extension -in @('.jpg','.jpeg','.png','.webp') }
+    foreach ($d in $dosyalar) {
+        $hedefDosya = Join-Path $hedef $d.Name
+        Copy-Item $d.FullName $hedefDosya -Force
+        $toplam++
     }
+    Write-Host "   $kat: $($dosyalar.Count) fotograf" -ForegroundColor Gray
 }
 
-# --- 2. MANIFEST.JSON OLUSTUR ---
+# Kok klasordeki fotograflar (kategorisiz)
+$kokDosyalar = Get-ChildItem $FOTOLAR -File | Where-Object { $_.Extension -in @('.jpg','.jpeg','.png','.webp') }
+foreach ($d in $kokDosyalar) {
+    Copy-Item $d.FullName (Join-Path $WEBSITE "images\projeler\$($d.Name)") -Force
+    $toplam++
+}
+
+Write-Host "   Toplam: $toplam fotograf kopyalandi." -ForegroundColor Gray
+
+# --- 2. MANIFEST.JSON OLUSTUR (Excel'den + klasor taramasi) ---
 Write-Host ""
 Write-Host "[2/4] manifest.json olusturuluyor..." -ForegroundColor Green
 
-$projelerKlasoru = "$WEBSITE_KLASORU\images\projeler"
-$manifestDosyasi = "$projelerKlasoru\manifest.json"
+$pyScript = @"
+import os, json, glob
 
-$fotograflar = Get-ChildItem $projelerKlasoru -File -Include "*.jpg","*.jpeg","*.png","*.webp" |
-               Where-Object { $_.Name -ne "manifest.json" } |
-               Sort-Object Name
+WEBSITE  = r'C:\mefsteel-website\images\projeler'
+FOTOLAR  = r'D:\00 ŞİRKET DOSYALARI\GENEL ŞİRKET DOSYALARI\WEB SİTESİ FOTOLARI'
+KATEGORILER = ['konut','ticari','endustriyel']
 
-$KATEGORI_ESLESTIRME_ADI = @{
-    "konut"      = @("villa","ev","konut","daire","bina","mesken","koy")
-    "ticari"     = @("ofis","ticari","magazа","showroom","market","plaza")
-    "endustriyel"= @("fabrika","depo","sanayi","endustr","ambar","fabr")
+manifest = []
+goruldu = set()
+
+# Excel foylerinden proje bilgilerini oku
+try:
+    import openpyxl
+    for kat in KATEGORILER:
+        xlsx = os.path.join(FOTOLAR, kat, f'PROJE_BILGI_FOYU_{kat.upper()}.xlsx')
+        if not os.path.exists(xlsx): continue
+        wb = openpyxl.load_workbook(xlsx, read_only=True)
+        ws = wb.active
+        for row in ws.iter_rows(min_row=5, values_only=True):
+            if not row[1] or str(row[1]).strip() in ('', '...'): continue
+            klasor  = str(row[1]).strip()
+            isim    = str(row[2]).strip() if row[2] and str(row[2]).strip() != '...' else klasor
+            konum   = str(row[3]).strip() if row[3] and str(row[3]).strip() != '...' else ''
+            alan    = str(row[4]).strip() if row[4] and str(row[4]).strip() != '...' else ''
+            yil     = str(row[5]).strip() if row[5] and str(row[5]).strip() != '...' else ''
+            etiket  = str(row[6]).strip() if row[6] else kat
+            aciklama= str(row[7]).strip() if row[7] and str(row[7]).strip() != '...' else ''
+            if konum: aciklama = (aciklama + ' | ' + konum if aciklama else konum)
+            if alan:  aciklama = (aciklama + ' | ' + alan + ' m2' if aciklama else alan + ' m2')
+
+            # Bu klasordeki fotograflari bul
+            klasor_yolu = os.path.join(FOTOLAR, kat, klasor)
+            if os.path.isdir(klasor_yolu):
+                dosyalar = sorted([f for f in os.listdir(klasor_yolu) if f.lower().endswith(('.jpg','.jpeg','.png','.webp'))])
+                for d in dosyalar:
+                    hedef_dosya = kat + '/' + d
+                    if hedef_dosya not in goruldu:
+                        goruldu.add(hedef_dosya)
+                        manifest.append({'dosya': hedef_dosya, 'isim': isim, 'kategori': etiket,
+                                        'aciklama': aciklama, 'yil': yil})
+except ImportError:
+    pass
+
+# Kopyalanan tum fotograflari tara (Excel'de olmayanlari da ekle)
+for kat in KATEGORILER:
+    kat_dir = os.path.join(WEBSITE, kat)
+    if not os.path.isdir(kat_dir): continue
+    for f in sorted(os.listdir(kat_dir)):
+        if not f.lower().endswith(('.jpg','.jpeg','.png','.webp')): continue
+        dosya_yolu = kat + '/' + f
+        if dosya_yolu not in goruldu:
+            goruldu.add(dosya_yolu)
+            manifest.append({'dosya': dosya_yolu, 'isim': 'MefSteel Proje',
+                           'kategori': kat, 'aciklama': 'Hafif celik yapi projesi'})
+
+# Kok klasordeki fotograflar
+for f in sorted(os.listdir(WEBSITE)):
+    if not f.lower().endswith(('.jpg','.jpeg','.png','.webp')): continue
+    if f not in goruldu:
+        goruldu.add(f)
+        manifest.append({'dosya': f, 'isim': 'MefSteel Proje',
+                        'kategori': 'konut', 'aciklama': 'Hafif celik yapi projesi'})
+
+with open(os.path.join(WEBSITE, 'manifest.json'), 'w', encoding='utf-8') as fp:
+    json.dump(manifest, fp, ensure_ascii=False)
+
+print(f'{len(manifest)} fotograf manifest.json a yazildi.')
+"@
+
+$pyScript | & $PYTHON
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "   [UYARI] manifest.json olusturulamadi" -ForegroundColor Yellow
 }
 
-function Kategori-Bul($dosyaAdi) {
-    $adKucuk = $dosyaAdi.ToLower()
-    foreach ($kat in $KATEGORI_ESLESTIRME_ADI.Keys) {
-        foreach ($anahtar in $KATEGORI_ESLESTIRME_ADI[$kat]) {
-            if ($adKucuk -like "*$anahtar*") { return $kat }
-        }
-    }
-    return "konut"
-}
-
-$manifest = @()
-foreach ($foto in $fotograflar) {
-    $isim = $foto.BaseName -replace "[-_]"," "
-    $isim = (Get-Culture).TextInfo.ToTitleCase($isim.ToLower())
-    $manifest += @{
-        dosya     = $foto.Name
-        isim      = $isim
-        kategori  = Kategori-Bul $foto.BaseName
-    }
-}
-
-$manifest | ConvertTo-Json -Depth 3 | Set-Content $manifestDosyasi -Encoding UTF8
-Write-Host "   $($manifest.Count) fotograf manifest'e eklendi." -ForegroundColor Gray
-
-# --- 3. GIT ADD + COMMIT + PUSH ---
+# --- 3. GIT PUSH ---
 Write-Host ""
 Write-Host "[3/4] GitHub'a yukleniyor..." -ForegroundColor Green
-
-Set-Location $WEBSITE_KLASORU
-
+Set-Location $WEBSITE
 $tarih = Get-Date -Format "dd.MM.yyyy HH:mm"
-$gitPath = (Get-Command git -ErrorAction SilentlyContinue)?.Source
-
-if (-not $gitPath) {
-    Write-Host "   [HATA] Git bulunamadi! Lutfen git yukleyin." -ForegroundColor Red
-} else {
-    try {
-        & git add . 2>&1 | Out-Null
-        $commitMesaji = "Site guncellendi: $tarih — $($manifest.Count) fotograf"
-        & git commit -m $commitMesaji 2>&1 | Out-Null
-        & git push 2>&1 | Out-Null
-        Write-Host "   GitHub'a push edildi." -ForegroundColor Gray
-    } catch {
-        Write-Host "   [UYARI] Git push basarisiz: $_" -ForegroundColor Yellow
-        Write-Host "   GitHub baglantisini kontrol edin." -ForegroundColor Yellow
-    }
+try {
+    & git add . 2>&1 | Out-Null
+    & git commit -m "Site guncellendi: $tarih" 2>&1 | Out-Null
+    & git push 2>&1 | Out-Null
+    Write-Host "   Push basarili." -ForegroundColor Gray
+} catch {
+    Write-Host "   [UYARI] Push basarisiz: $_" -ForegroundColor Yellow
 }
 
 # --- 4. TAMAMLANDI ---
 Write-Host ""
 Write-Host "=====================================" -ForegroundColor Green
 Write-Host "  TAMAMLANDI!" -ForegroundColor Green
-Write-Host "  $($manifest.Count) fotograf islendi." -ForegroundColor Green
-Write-Host "  Vercel yaklasik 30 saniyede" -ForegroundColor Green
-Write-Host "  mefsteel.com'u guncelleyecek." -ForegroundColor Green
+Write-Host "  Vercel ~30 saniyede gunceller." -ForegroundColor Green
 Write-Host "=====================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "Devam etmek icin bir tusa basin..." -ForegroundColor Gray
