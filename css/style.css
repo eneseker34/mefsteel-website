@@ -61,7 +61,7 @@ body {
 }
 
 .logo-img {
-  height: 44px;
+  height: 56px;
   width: auto;
   filter: invert(1) brightness(2);
   transition: var(--transition);
@@ -69,10 +69,10 @@ body {
 
 .logo-img:hover { opacity: 0.85; }
 
-#navbar.scrolled .logo-img { height: 38px; }
+#navbar.scrolled .logo-img { height: 48px; }
 
 .footer-brand .logo-img {
-  height: 40px;
+  height: 52px;
   margin-bottom: 12px;
 }
 
