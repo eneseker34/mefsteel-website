@@ -149,26 +149,36 @@
 </section>
 
 <!-- ===== PROJELERİMİZ ===== -->
-<section id="projeler">
-  <div class="projects-header">
-    <div class="section-label fade-up">Projelerimiz</div>
-    <h2 class="section-title fade-up delay-1">Tamamlanan<br>Çalışmalarımız</h2>
-
-    <div class="filter-tabs fade-up delay-2">
-      <button class="filter-btn active" data-filter="tumu">Tümü</button>
-      <button class="filter-btn" data-filter="konut">Konut</button>
-      <button class="filter-btn" data-filter="ticari">Ticari</button>
-      <button class="filter-btn" data-filter="endustriyel">Endüstriyel</button>
+<section id="projeler" class="gallery4-section">
+  <div class="container">
+    <div class="gallery4-header">
+      <div>
+        <div class="section-label fade-up">Projelerimiz</div>
+        <h2 class="section-title fade-up delay-1">Tamamlanan<br>Çalışmalarımız</h2>
+        <p class="section-desc fade-up delay-2" style="margin-top:12px">Hafif çelik yapı sistemleriyle hayata geçirdiğimiz projelerden seçkiler.</p>
+      </div>
+      <div class="gallery4-nav fade-up delay-2">
+        <button class="gallery4-btn" id="g4-prev" aria-label="Önceki">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="gallery4-btn" id="g4-next" aria-label="Sonraki">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- Fotoğraflar manifest.json'dan otomatik yüklenir -->
-  <div id="projects-grid" class="projects-grid fade-up delay-2">
-    <div class="project-placeholder" style="grid-column:1/-1;padding:60px;text-align:center;border-radius:16px;border:1px dashed rgba(255,255,255,0.1)">
-      <div style="font-size:2rem;margin-bottom:12px">📸</div>
-      <div style="color:#8B9BAA;font-size:0.9rem">Proje fotoğrafları yakında eklenecek</div>
+  <div class="gallery4-track-wrap">
+    <!-- Kartlar manifest.json'dan otomatik yüklenir -->
+    <div class="gallery4-track" id="gallery4-track">
+      <div class="gallery4-empty">
+        <div style="font-size:2.5rem;margin-bottom:12px">📸</div>
+        <div>Proje fotoğrafları yakında eklenecek</div>
+      </div>
     </div>
   </div>
+
+  <div class="gallery4-dots" id="gallery4-dots"></div>
 </section>
 
 <!-- ===== HAKKIMIZDA ===== -->
@@ -268,9 +278,26 @@
         <div class="contact-icon">📍</div>
         <div>
           <div class="contact-item-title">Adres</div>
-          <!-- Adresinizi buraya yazın -->
           <div class="contact-item-value">Tekirdağ, Türkiye</div>
         </div>
+      </div>
+
+      <!-- Google Maps -->
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d386044.34!2d27.5!3d41.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTMzMjQ2ODU3NTQxMTQwNg!5e0!3m2!1str!2str!4v1!5m2!1str!2str&q=MefSteel"
+          width="100%"
+          height="220"
+          style="border:0;border-radius:12px;filter:invert(90%) hue-rotate(180deg)"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="MefSteel Konum">
+        </iframe>
+        <a href="https://share.google/215MW9k4vMHxQfF1d" target="_blank" rel="noopener" class="map-link">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+          Google Haritalar'da Aç
+        </a>
       </div>
 
       <div class="contact-item">

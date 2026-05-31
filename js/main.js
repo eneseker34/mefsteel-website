@@ -67,70 +67,112 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
-// ===== DİNAMİK GALERİ — manifest.json'dan otomatik yükle =====
+// ===== GALLERY4 CAROUSEL =====
 const KATEGORI_ETIKET = { konut: 'Konut', ticari: 'Ticari', endustriyel: 'Endüstriyel', diger: 'Diğer' };
 
-function renderGallery(projects) {
-  const grid = document.getElementById('projects-grid');
-  if (!grid) return;
+let g4Index = 0;
+let g4Total = 0;
+const g4Track = document.getElementById('gallery4-track');
+const g4Dots  = document.getElementById('gallery4-dots');
+const g4Prev  = document.getElementById('g4-prev');
+const g4Next  = document.getElementById('g4-next');
+
+function g4CardWidth() {
+  const card = g4Track?.querySelector('.gallery4-card');
+  if (!card) return 360;
+  return card.offsetWidth + 20;
+}
+
+function g4UpdateState() {
+  if (!g4Track) return;
+  const offset = g4Index * g4CardWidth();
+  g4Track.style.transform = `translateX(-${offset}px)`;
+  if (g4Prev) g4Prev.disabled = g4Index === 0;
+  if (g4Next) g4Next.disabled = g4Index >= g4Total - 1;
+  document.querySelectorAll('.gallery4-dot').forEach((d, i) => d.classList.toggle('active', i === g4Index));
+}
+
+function g4Render(projects) {
+  if (!g4Track) return;
 
   if (!projects || projects.length === 0) {
-    grid.innerHTML = `
-      <div style="grid-column:1/-1;padding:60px;text-align:center;border-radius:16px;border:1px dashed rgba(255,255,255,0.1)">
-        <div style="font-size:2rem;margin-bottom:12px">📸</div>
-        <div style="color:#8B9BAA;font-size:0.9rem">Proje fotoğrafları yakında eklenecek</div>
-      </div>`;
+    g4Track.innerHTML = `<div class="gallery4-empty"><div style="font-size:2.5rem;margin-bottom:12px">📸</div><div>Proje fotoğrafları yakında eklenecek</div></div>`;
+    if (g4Dots) g4Dots.innerHTML = '';
     return;
   }
 
-  grid.innerHTML = projects.map((p, i) => {
+  g4Total = projects.length;
+
+  g4Track.innerHTML = projects.map(p => {
     const imgPath = 'images/projeler/' + p.dosya;
-    const kat = p.kategori || 'diger';
+    const kat  = p.kategori || 'diger';
     const etiket = KATEGORI_ETIKET[kat] || kat;
     const isim = p.isim || p.dosya.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
-    const spanClass = i === 0 ? ' style="grid-column:span 2;aspect-ratio:16/9"' : '';
+    const aciklama = p.aciklama || '';
     return `
-      <div class="project-card" data-cat="${kat}" data-img="${imgPath}"${spanClass}>
+      <div class="gallery4-card" data-img="${imgPath}">
         <img src="${imgPath}" alt="${isim}" loading="lazy"
-             onerror="this.parentNode.innerHTML='<div class=\\'project-placeholder\\'><div class=\\'ph-icon\\'>🏗️</div><div class=\\'ph-text\\'>${isim}</div></div>'">
-        <div class="project-overlay">
-          <div class="project-info">
-            <div class="project-tag">${etiket}</div>
-            <div class="project-name">${isim}</div>
+             onerror="this.style.display='none';this.parentNode.style.background='linear-gradient(135deg,#112233,#1E3A5F)'">
+        <div class="gallery4-card-overlay"></div>
+        <div class="gallery4-card-body">
+          <div class="gallery4-card-tag">${etiket}</div>
+          <div class="gallery4-card-title">${isim}</div>
+          ${aciklama ? `<div class="gallery4-card-desc">${aciklama}</div>` : ''}
+          <div class="gallery4-card-more">
+            Detaylar
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
         </div>
       </div>`;
   }).join('');
 
-  // Yeni kartlara filter ve lightbox bağla
-  bindFilter();
-  bindLightbox();
+  // Dots
+  if (g4Dots) {
+    g4Dots.innerHTML = projects.map((_, i) =>
+      `<button class="gallery4-dot${i === 0 ? ' active' : ''}" data-i="${i}" aria-label="Slayt ${i+1}"></button>`
+    ).join('');
+    g4Dots.querySelectorAll('.gallery4-dot').forEach(d => {
+      d.addEventListener('click', () => { g4Index = +d.dataset.i; g4UpdateState(); });
+    });
+  }
+
+  // Lightbox bağla
+  g4Track.querySelectorAll('.gallery4-card[data-img]').forEach((card, i, arr) => {
+    const imgs = [...arr].map(c => c.dataset.img);
+    card.addEventListener('click', () => openLightbox(imgs, i));
+  });
+
+  g4Index = 0;
+  g4UpdateState();
 }
+
+// Prev / Next
+if (g4Prev) g4Prev.addEventListener('click', () => { if (g4Index > 0) { g4Index--; g4UpdateState(); } });
+if (g4Next) g4Next.addEventListener('click', () => { if (g4Index < g4Total - 1) { g4Index++; g4UpdateState(); } });
+
+// Dokunmatik / mouse drag
+(function() {
+  if (!g4Track) return;
+  let startX = 0, isDragging = false;
+  const onStart = e => { startX = (e.touches?.[0] || e).clientX; isDragging = true; };
+  const onEnd   = e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const dx = (e.changedTouches?.[0] || e).clientX - startX;
+    if (dx < -50 && g4Index < g4Total - 1) { g4Index++; g4UpdateState(); }
+    if (dx > 50  && g4Index > 0)            { g4Index--; g4UpdateState(); }
+  };
+  g4Track.addEventListener('mousedown',  onStart);
+  g4Track.addEventListener('touchstart', onStart, { passive: true });
+  window.addEventListener('mouseup',  onEnd);
+  window.addEventListener('touchend', onEnd);
+})();
 
 // manifest.json yükle
 fetch('images/projeler/manifest.json?v=' + Date.now())
   .then(r => r.ok ? r.json() : [])
-  .then(data => renderGallery(data))
-  .catch(() => renderGallery([]));
-
-// ===== FILTER TABS =====
-const filterBtns = document.querySelectorAll('.filter-btn');
-
-function bindFilter() {
-  filterBtns.forEach(btn => {
-    btn.onclick = () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      document.querySelectorAll('#projects-grid .project-card[data-cat]').forEach(card => {
-        const show = filter === 'tumu' || card.dataset.cat === filter;
-        card.style.opacity = show ? '1' : '0.2';
-        card.style.transform = show ? 'scale(1)' : 'scale(0.95)';
-        card.style.pointerEvents = show ? '' : 'none';
-      });
-    };
-  });
-}
+  .then(data => g4Render(data))
+  .catch(() => g4Render([]));
 
 // ===== LIGHTBOX =====
 const lightbox = document.getElementById('lightbox');
