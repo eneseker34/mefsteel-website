@@ -473,29 +473,54 @@ function bindLightbox() {
   });
 }
 
-// ===== GALERİ FİLTRE + LİGHTBOX =====
-(function() {
-  const filterBtns = document.querySelectorAll('.gf-btn');
-  const items = document.querySelectorAll('.gallery-item');
+// ===== GALERİ — manifest.json'dan yükle =====
+const KAT = { konut: 'Konut', ticari: 'Ticari', endustriyel: 'Endüstriyel', diger: 'Diğer' };
 
+function buildGallery(projects) {
+  const grid = document.getElementById('gallery-grid');
+  if (!grid || !projects.length) return;
+
+  grid.innerHTML = projects.map((p, i) => {
+    const img = p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya;
+    const kat = p.kategori || 'konut';
+    const tag = KAT[kat] || 'Proje';
+    const isim = p.isim || ('Proje ' + (i + 1));
+    const desc = p.aciklama || 'Hafif çelik yapı projesi';
+    const big  = i === 0 ? ' big' : '';
+    return `<div class="gallery-item${big}" data-cat="${kat}" data-img="${img}" data-title="${isim}" data-desc="${desc}">
+      <img src="${img}" alt="${isim}" loading="lazy" onerror="this.parentNode.style.background='#1E3A5F'">
+      <div class="gi-overlay">
+        <div class="gi-tag">${tag}</div>
+        <div class="gi-title">${isim}</div>
+        <div class="gi-desc">${desc}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Filtre
+  const filterBtns = document.querySelectorAll('.gf-btn');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       const cat = btn.dataset.cat;
-      items.forEach(item => {
-        const show = cat === 'tumu' || item.dataset.cat === cat;
-        item.classList.toggle('hidden', !show);
+      grid.querySelectorAll('.gallery-item').forEach(item => {
+        item.classList.toggle('hidden', cat !== 'tumu' && item.dataset.cat !== cat);
       });
     });
   });
 
   // Lightbox
-  const imgs = [...items].map(i => i.dataset.img);
-  items.forEach((item, idx) => {
-    item.addEventListener('click', () => openLightbox(imgs, idx));
+  const allImgs = projects.map(p => p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya);
+  grid.querySelectorAll('.gallery-item').forEach((item, idx) => {
+    item.addEventListener('click', () => openLightbox(allImgs, idx));
   });
-})();
+}
+
+fetch('images/projeler/manifest.json?v=' + Date.now())
+  .then(r => r.ok ? r.json() : [])
+  .then(data => buildGallery(data))
+  .catch(() => {});
 
 // ===== CONTACT FORM =====
 const form = document.getElementById('contact-form');
