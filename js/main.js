@@ -70,9 +70,7 @@
   raf = requestAnimationFrame(render);
 })('shader-canvas');
 
-(function(){ document.getElementById('shader-canvas') && initShader('pricing-shader'); })();
-
-// Hero shader zaten başlatıldı, pricing shader'ı da başlat
+// Hero shader başlatıldı, pricing shader ayrıca başlatılıyor
 (function initPricingShader() {
   const canvas = document.getElementById('pricing-shader');
   if (!canvas) return;
