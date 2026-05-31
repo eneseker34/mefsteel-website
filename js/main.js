@@ -181,8 +181,143 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
-// ===== GALLERY4 CAROUSEL =====
+// ===== CARDSTACK 3D FAN =====
 const KATEGORI_ETIKET = { konut: 'Konut', ticari: 'Ticari', endustriyel: 'Endüstriyel', diger: 'Diğer' };
+
+const CS = {
+  items: [],
+  active: 0,
+  fan: document.getElementById('cardstack-fan'),
+  dots: document.getElementById('cardstack-dots'),
+  dragging: false,
+  startX: 0,
+
+  CARD_W: 340,
+  SPREAD: 48,
+  OVERLAP: 0.48,
+  DEPTH: 140,
+  TILT: 12,
+  MAX_VIS: 7,
+
+  go(idx) {
+    this.active = ((idx % this.items.length) + this.items.length) % this.items.length;
+    this.render();
+  },
+
+  render() {
+    if (!this.fan) return;
+    const cards = this.fan.querySelectorAll('.cs-card');
+    const n = this.items.length;
+    const maxOff = Math.floor(this.MAX_VIS / 2);
+    const stepDeg = maxOff > 0 ? this.SPREAD / maxOff : 0;
+    const spacing = Math.round(this.CARD_W * (1 - this.OVERLAP));
+
+    cards.forEach((card, i) => {
+      let off = i - this.active;
+      // wrap
+      if (off > n / 2)  off -= n;
+      if (off < -n / 2) off += n;
+      const abs = Math.abs(off);
+      const vis = abs <= maxOff;
+
+      card.style.opacity    = vis ? '1' : '0';
+      card.style.pointerEvents = vis ? '' : 'none';
+      card.classList.toggle('active', off === 0);
+
+      const rotZ  = off * stepDeg;
+      const tx    = off * spacing;
+      const ty    = abs * 10 + (off === 0 ? -22 : 0);
+      const tz    = -abs * this.DEPTH;
+      const scale = off === 0 ? 1.03 : 0.94;
+      const rotX  = off === 0 ? 0 : this.TILT;
+      card.style.zIndex = 100 - abs;
+      card.style.transform = `translate(${tx}px, ${ty}px) translateZ(${tz}px) rotateZ(${rotZ}deg) rotateX(${rotX}deg) scale(${scale})`;
+    });
+
+    this.dots && this.dots.querySelectorAll('.cs-dot').forEach((d, i) => d.classList.toggle('active', i === this.active));
+  },
+
+  build(projects) {
+    if (!this.fan) return;
+    if (!projects || !projects.length) return;
+    this.items = projects;
+
+    this.fan.innerHTML = projects.map((p, i) => {
+      const img  = 'images/projeler/' + p.dosya;
+      const kat  = p.kategori || 'diger';
+      const etiket = KATEGORI_ETIKET[kat] || kat;
+      const isim = p.isim || p.dosya.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+      const desc = p.aciklama || '';
+      return `
+        <div class="cs-card" data-i="${i}" data-img="${img}">
+          <img src="${img}" alt="${isim}" loading="lazy"
+               onerror="this.style.display='none';this.parentNode.style.background='linear-gradient(135deg,#112233,#1E3A5F)'">
+          <div class="cs-card-overlay"></div>
+          <div class="cs-card-body">
+            <div class="cs-card-tag">${etiket}</div>
+            <div class="cs-card-title">${isim}</div>
+            ${desc ? `<div class="cs-card-desc">${desc}</div>` : ''}
+          </div>
+        </div>`;
+    }).join('');
+
+    // Dots
+    if (this.dots) {
+      this.dots.innerHTML = projects.map((_, i) =>
+        `<button class="cs-dot" data-i="${i}" aria-label="Slayt ${i+1}"></button>`
+      ).join('');
+      this.dots.querySelectorAll('.cs-dot').forEach(d =>
+        d.addEventListener('click', () => this.go(+d.dataset.i))
+      );
+    }
+
+    // Kart tıklama
+    this.fan.querySelectorAll('.cs-card').forEach(card => {
+      card.addEventListener('click', e => {
+        if (this.dragging) return;
+        const i = +card.dataset.i;
+        if (i === this.active) {
+          openLightbox(this.items.map(p => 'images/projeler/' + p.dosya), i);
+        } else {
+          this.go(i);
+        }
+      });
+    });
+
+    // Drag / swipe (aktif kart)
+    this.fan.addEventListener('mousedown',  e => this._dragStart(e.clientX));
+    this.fan.addEventListener('touchstart', e => this._dragStart(e.touches[0].clientX), { passive: true });
+    window.addEventListener('mouseup',  e => this._dragEnd(e.clientX));
+    window.addEventListener('touchend', e => this._dragEnd(e.changedTouches[0].clientX));
+
+    // Klavye
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft')  this.go(this.active - 1);
+      if (e.key === 'ArrowRight') this.go(this.active + 1);
+    });
+
+    this.active = 0;
+    this.render();
+  },
+
+  _dragStart(x) { this.startX = x; this.dragging = false; },
+  _dragEnd(x) {
+    const dx = x - this.startX;
+    if (Math.abs(dx) > 60) {
+      this.dragging = true;
+      dx > 0 ? this.go(this.active - 1) : this.go(this.active + 1);
+      setTimeout(() => { this.dragging = false; }, 100);
+    }
+  }
+};
+
+// manifest.json yükle → CardStack'e ver
+fetch('images/projeler/manifest.json?v=' + Date.now())
+  .then(r => r.ok ? r.json() : [])
+  .then(data => CS.build(data))
+  .catch(() => {});
+
+// ===== GALLERY4 CAROUSEL =====
 
 let g4Index = 0;
 let g4Total = 0;

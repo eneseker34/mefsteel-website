@@ -210,37 +210,27 @@
   </div>
 </section>
 
-<!-- ===== PROJELERİMİZ ===== -->
-<section id="projeler" class="gallery4-section">
-  <div class="container">
-    <div class="gallery4-header">
-      <div>
-        <div class="section-label fade-up">Projelerimiz</div>
-        <h2 class="section-title fade-up delay-1">Tamamlanan<br>Çalışmalarımız</h2>
-        <p class="section-desc fade-up delay-2" style="margin-top:12px">Hafif çelik yapı sistemleriyle hayata geçirdiğimiz projelerden seçkiler.</p>
-      </div>
-      <div class="gallery4-nav fade-up delay-2">
-        <button class="gallery4-btn" id="g4-prev" aria-label="Önceki">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        </button>
-        <button class="gallery4-btn" id="g4-next" aria-label="Sonraki">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
-    </div>
+<!-- ===== PROJELERİMİZ (CARDSTACK) ===== -->
+<section id="projeler" class="cardstack-section">
+  <div class="cardstack-header fade-up">
+    <div class="section-label" style="justify-content:center">Projelerimiz</div>
+    <h2 class="section-title">Tamamlanan<br>Çalışmalarımız</h2>
+    <p class="section-desc" style="margin:12px auto 0">Hafif çelik yapı sistemleriyle hayata geçirdiğimiz projelerden seçkiler.</p>
   </div>
 
-  <div class="gallery4-track-wrap">
-    <!-- Kartlar manifest.json'dan otomatik yüklenir -->
-    <div class="gallery4-track" id="gallery4-track">
-      <div class="gallery4-empty">
+  <div class="cardstack-stage" id="cardstack-stage">
+    <div class="cardstack-spotlight-top"></div>
+    <div class="cardstack-spotlight-bottom"></div>
+    <div class="cardstack-fan" id="cardstack-fan">
+      <!-- Kartlar JS ile üretilir -->
+      <div class="cardstack-empty">
         <div style="font-size:2.5rem;margin-bottom:12px">📸</div>
         <div>Proje fotoğrafları yakında eklenecek</div>
       </div>
     </div>
   </div>
 
-  <div class="gallery4-dots" id="gallery4-dots"></div>
+  <div class="cardstack-dots" id="cardstack-dots"></div>
 </section>
 
 <!-- ===== HAKKIMIZDA ===== -->
