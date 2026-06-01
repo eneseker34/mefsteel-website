@@ -531,18 +531,58 @@ fetch('images/projeler/manifest.json?v=' + Date.now())
 // ===== CONTACT FORM =====
 const form = document.getElementById('contact-form');
 if (form) {
-  form.addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = form.querySelector('.form-submit');
+    const btn    = form.querySelector('.form-submit');
     const success = form.querySelector('.form-success');
+    const formId  = form.dataset.formspreeId;
+
     btn.textContent = 'Gönderiliyor...';
     btn.disabled = true;
-    setTimeout(() => {
+
+    // Formspree ID tanımlı ve placeholder değilse gerçek gönder
+    if (formId && formId !== 'FORM_ID_BURAYA') {
+      try {
+        const res = await fetch(`https://formspree.io/f/${formId}`, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (res.ok) {
+          form.reset();
+          btn.style.display = 'none';
+          success.style.display = 'block';
+          success.textContent = '✓ Mesajınız iletildi! En kısa sürede dönüş yapacağız.';
+        } else {
+          btn.textContent = 'Mesaj Gönder →';
+          btn.disabled = false;
+          alert('Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.');
+        }
+      } catch {
+        // Ağ hatası — WhatsApp'a yönlendir
+        const tel = form.dataset.tel || '+905535430212';
+        const data = new FormData(form);
+        const msg  = encodeURIComponent(
+          `Merhaba, ${data.get('name') || ''} - ${data.get('message') || ''}`
+        );
+        window.open(`https://wa.me/${tel.replace(/\D/g,'')}?text=${msg}`, '_blank');
+        btn.textContent = 'Mesaj Gönder →';
+        btn.disabled = false;
+      }
+    } else {
+      // Formspree ayarlanmamış → WhatsApp yedek
+      const data = new FormData(form);
+      const msg  = encodeURIComponent(
+        `Merhaba! ${data.get('name') || 'Müşteri'} | ` +
+        `Hizmet: ${data.get('service') || '-'} | ` +
+        `${data.get('message') || ''}`
+      );
+      window.open(`https://wa.me/905535430212?text=${msg}`, '_blank');
       form.reset();
       btn.style.display = 'none';
       success.style.display = 'block';
-      success.textContent = '✓ Mesajınız iletildi! En kısa sürede dönüş yapacağız.';
-    }, 1200);
+      success.textContent = '✓ WhatsApp açıldı! En kısa sürede dönüş yapacağız.';
+    }
   });
 }
 
