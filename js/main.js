@@ -476,7 +476,15 @@ const KAT = { konut: 'Konut', ticari: 'Ticari', endustriyel: 'Endüstriyel', dig
 
 function buildGallery(projects) {
   const grid = document.getElementById('gallery-grid');
-  if (!grid || !projects.length) return;
+  if (!grid) return;
+  if (!projects.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:#8B9BAA">
+      <div style="font-size:3rem;margin-bottom:16px">🏗️</div>
+      <div style="font-size:1.1rem;font-weight:600;color:#E8EDF2;margin-bottom:8px">Projelerimiz yükleniyor</div>
+      <div style="font-size:0.9rem">Fotoğraflar yakında burada olacak. Detay için <a href="#iletisim" style="color:#F4A261">bizimle iletişime geçin</a>.</div>
+    </div>`;
+    return;
+  }
 
   grid.innerHTML = projects.map((p, i) => {
     const img = p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya;

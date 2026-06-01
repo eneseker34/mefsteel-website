@@ -44,6 +44,40 @@ foreach ($d in $kokDosyalar) {
 
 Write-Host "   Toplam: $toplam fotograf kopyalandi." -ForegroundColor Gray
 
+# --- 1b. WEBP DONUSUMU ---
+Write-Host ""
+Write-Host "[1b/4] WebP donusumu yapiliyor (kucuk dosya boyutu)..." -ForegroundColor Green
+$webpScript = @"
+import os, subprocess, sys
+try:
+    from PIL import Image
+    HAS_PIL = True
+except ImportError:
+    HAS_PIL = False
+
+PROJELER = r'C:\mefsteel-website\images\projeler'
+donusturulan = 0
+
+if HAS_PIL:
+    for kok, klasorler, dosyalar in os.walk(PROJELER):
+        for dosya in dosyalar:
+            if dosya.lower().endswith(('.jpg','.jpeg','.png')):
+                kaynak = os.path.join(kok, dosya)
+                hedef  = os.path.splitext(kaynak)[0] + '.webp'
+                if not os.path.exists(hedef):
+                    try:
+                        img = Image.open(kaynak)
+                        img.save(hedef, 'WEBP', quality=85, method=6)
+                        donusturulan += 1
+                    except Exception:
+                        pass
+    print(f'{donusturulan} fotograf WebP formatina donusturuld.')
+else:
+    print('PIL yok, WebP donusumu atlandı. pip install Pillow')
+"@
+$webpScript | & $PYTHON
+Write-Host "   WebP donusumu tamamlandi." -ForegroundColor Gray
+
 # --- 2. MANIFEST.JSON OLUSTUR (Excel'den + klasor taramasi) ---
 Write-Host ""
 Write-Host "[2/4] manifest.json olusturuluyor..." -ForegroundColor Green
