@@ -528,60 +528,46 @@ fetch('images/projeler/manifest.json?v=' + Date.now())
   .then(data => buildGallery(data))
   .catch(() => {});
 
-// ===== CONTACT FORM =====
+// ===== CONTACT FORM — Web3Forms =====
 const form = document.getElementById('contact-form');
 if (form) {
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    const btn    = form.querySelector('.form-submit');
+    const btn     = form.querySelector('.form-submit');
     const success = form.querySelector('.form-success');
-    const formId  = form.dataset.formspreeId;
 
     btn.textContent = 'Gönderiliyor...';
     btn.disabled = true;
 
-    // Formspree ID tanımlı ve placeholder değilse gerçek gönder
-    if (formId && formId !== 'FORM_ID_BURAYA') {
-      try {
-        const res = await fetch(`https://formspree.io/f/${formId}`, {
-          method: 'POST',
-          headers: { 'Accept': 'application/json' },
-          body: new FormData(form)
-        });
-        if (res.ok) {
-          form.reset();
-          btn.style.display = 'none';
-          success.style.display = 'block';
-          success.textContent = '✓ Mesajınız iletildi! En kısa sürede dönüş yapacağız.';
-        } else {
-          btn.textContent = 'Mesaj Gönder →';
-          btn.disabled = false;
-          alert('Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.');
-        }
-      } catch {
-        // Ağ hatası — WhatsApp'a yönlendir
-        const tel = form.dataset.tel || '+905535430212';
-        const data = new FormData(form);
-        const msg  = encodeURIComponent(
-          `Merhaba, ${data.get('name') || ''} - ${data.get('message') || ''}`
-        );
-        window.open(`https://wa.me/${tel.replace(/\D/g,'')}?text=${msg}`, '_blank');
-        btn.textContent = 'Mesaj Gönder →';
-        btn.disabled = false;
+    const data = new FormData(form);
+    data.append('access_key', 'f54aebdf-71a6-4465-9963-bd12a09cf186');
+    data.append('subject',    'MefSteel Web Sitesi - Yeni Mesaj');
+    data.append('from_name',  'MefSteel Web Formu');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+
+      if (json.success) {
+        form.reset();
+        btn.style.display   = 'none';
+        success.style.display = 'block';
+        success.textContent = '✓ Mesajınız iletildi! En kısa sürede dönüş yapacağız.';
+      } else {
+        throw new Error(json.message || 'Gönderi hatası');
       }
-    } else {
-      // Formspree ayarlanmamış → WhatsApp yedek
-      const data = new FormData(form);
-      const msg  = encodeURIComponent(
-        `Merhaba! ${data.get('name') || 'Müşteri'} | ` +
-        `Hizmet: ${data.get('service') || '-'} | ` +
-        `${data.get('message') || ''}`
+    } catch (err) {
+      // Yedek: WhatsApp
+      const d   = new FormData(form);
+      const msg = encodeURIComponent(
+        `Merhaba! ${d.get('name') || ''} | ${d.get('service') || ''} | ${d.get('message') || ''}`
       );
       window.open(`https://wa.me/905535430212?text=${msg}`, '_blank');
-      form.reset();
-      btn.style.display = 'none';
-      success.style.display = 'block';
-      success.textContent = '✓ WhatsApp açıldı! En kısa sürede dönüş yapacağız.';
+      btn.textContent = 'Mesaj Gönder →';
+      btn.disabled    = false;
     }
   });
 }
