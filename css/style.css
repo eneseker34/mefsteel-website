@@ -1584,7 +1584,7 @@ footer {
     width: 100vw;
     height: 100vh;
     min-height: -webkit-fill-available;
-    background: rgba(13,27,42,0.99);
+    background: #0D1B2A;
     justify-content: center;
     align-items: center;
     gap: 24px;
