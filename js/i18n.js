@@ -29,12 +29,14 @@ async function loadLang(lang) {
 function applyTranslations() {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[key] !== undefined) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = translations[key];
-      } else {
-        el.textContent = translations[key];
-      }
+    if (translations[key] === undefined) return;
+    const tag = el.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA') {
+      el.placeholder = translations[key];
+    } else if (tag === 'OPTION') {
+      el.textContent = translations[key];
+    } else {
+      el.textContent = translations[key];
     }
   });
 }
