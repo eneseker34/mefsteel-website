@@ -1603,6 +1603,95 @@ footer {
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
 }
 
+/* ===== DİL SEÇİCİ ===== */
+.lang-switcher {
+  position: relative;
+  margin-left: 8px;
+}
+
+.lang-btn {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--light);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.lang-btn:hover { border-color: var(--accent); }
+
+.lang-caret { font-size: 0.65rem; opacity: 0.7; }
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #1a2d42;
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 150px;
+  box-shadow: var(--shadow);
+  z-index: 2000;
+}
+
+.lang-dropdown.open { display: block; }
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  background: none;
+  border: none;
+  color: var(--light);
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: left;
+}
+
+.lang-option:hover { background: var(--glass); }
+.lang-option.active { color: var(--accent); font-weight: 600; }
+
+/* ===== TRUST BADGES (Moodilev'den öğrenildi) ===== */
+.hero-trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.trust-badge {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50px;
+  padding: 6px 14px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .lang-btn { font-size: 0.75rem; padding: 5px 10px; }
+  .hero-trust-badges { gap: 8px; }
+  .trust-badge { font-size: 0.72rem; padding: 5px 10px; }
+}
+
 /* ===== BLOG PREVIEW (Ana Sayfa) ===== */
 #blog-preview {
   padding: 100px 5%;

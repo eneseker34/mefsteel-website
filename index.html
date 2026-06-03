@@ -52,6 +52,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/i18n.js" defer></script>
 </head>
 <body>
 
@@ -62,13 +63,15 @@
   </a>
 
   <nav>
-    <a href="#hizmetler">Hizmetler</a>
-    <a href="#paketler">Paketler</a>
-    <a href="#projeler">Projeler</a>
-    <a href="/blog/">Blog</a>
-    <a href="#hakkimizda">Hakkımızda</a>
-    <a href="#iletisim" class="nav-cta">İletişim</a>
+    <a href="#hizmetler" data-i18n="nav_services">Hizmetler</a>
+    <a href="#paketler" data-i18n="nav_packages">Paketler</a>
+    <a href="#projeler" data-i18n="nav_projects">Projeler</a>
+    <a href="/blog/" data-i18n="nav_blog">Blog</a>
+    <a href="#hakkimizda" data-i18n="nav_about">Hakkımızda</a>
+    <a href="#iletisim" class="nav-cta" data-i18n="nav_contact">İletişim</a>
   </nav>
+
+  <div id="lang-switcher" class="lang-switcher"></div>
 
   <div class="hamburger" aria-label="Menü">
     <span></span><span></span><span></span>
@@ -86,26 +89,32 @@
   </div>
 
   <div class="hero-content">
-    <div class="hero-badge">Türkiye'nin Güvenilir Çelik Partneri</div>
+    <div class="hero-badge" data-i18n="hero_badge">Türkiye'nin Güvenilir Çelik Partneri</div>
 
     <h1 class="hero-title">
-      Hafif Çelik ile<br>
-      <span>Güçlü Yapılar</span><br>
-      İnşa Ediyoruz
+      <span data-i18n="hero_title_1">Hafif Çelik ile</span><br>
+      <span data-i18n="hero_title_2">Güçlü Yapılar</span><br>
+      <span data-i18n="hero_title_3">İnşa Ediyoruz</span>
     </h1>
 
-    <p class="hero-desc">
+    <p class="hero-desc" data-i18n="hero_desc">
       Tasarımdan montaja kadar tüm süreçlerde yanınızdayız.
       Hafif çelik yapı sistemlerinde uzman ekibimizle projelerinizi
       hayata geçiriyoruz.
     </p>
 
+    <div class="hero-trust-badges">
+      <span class="trust-badge">✅ <span data-i18n="trust_warranty">2 Yıl Garanti</span></span>
+      <span class="trust-badge">⚡ <span data-i18n="trust_delivery">45 Günde Teslim</span></span>
+      <span class="trust-badge">🏛️ <span data-i18n="trust_tbdy">TBDY 2026 Uyumlu</span></span>
+    </div>
+
     <div class="hero-buttons">
       <a href="#projeler" class="btn-primary">
-        Projelerimizi Gör
+        <span data-i18n="hero_btn_primary">Projelerimizi Gör</span>
         <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
-      <a href="#iletisim" class="btn-secondary">
+      <a href="#iletisim" class="btn-secondary" data-i18n="hero_btn_secondary">
         Teklif Al
       </a>
     </div>
@@ -262,10 +271,10 @@
   </div>
 
   <div class="gallery-filter">
-    <button class="gf-btn active" data-cat="tumu">Tümü</button>
-    <button class="gf-btn" data-cat="konut">Konut</button>
-    <button class="gf-btn" data-cat="ticari">Ticari</button>
-    <button class="gf-btn" data-cat="endustriyel">Endüstriyel</button>
+    <button class="gf-btn active" data-cat="tumu" data-i18n="filter_all">Tümü</button>
+    <button class="gf-btn" data-cat="konut" data-i18n="filter_residential">Konut</button>
+    <button class="gf-btn" data-cat="ticari" data-i18n="filter_commercial">Ticari</button>
+    <button class="gf-btn" data-cat="endustriyel" data-i18n="filter_industrial">Endüstriyel</button>
   </div>
 
   <!-- Fotoğraflar manifest.json'dan otomatik yüklenir -->

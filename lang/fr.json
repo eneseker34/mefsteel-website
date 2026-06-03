@@ -1,0 +1,66 @@
+{
+  "nav_services": "Services",
+  "nav_packages": "Forfaits",
+  "nav_projects": "Projets",
+  "nav_blog": "Blog",
+  "nav_about": "À propos",
+  "nav_contact": "Contact",
+
+  "hero_badge": "Votre partenaire acier de confiance en Turquie",
+  "hero_title_1": "Des structures",
+  "hero_title_2": "solides en acier",
+  "hero_title_3": "léger — on les bâtit",
+  "hero_desc": "De la conception au montage, nous vous accompagnons à chaque étape. Notre équipe d'experts réalise vos projets avec des systèmes à ossature acier légère.",
+  "hero_btn_primary": "Voir les projets",
+  "hero_btn_secondary": "Demander un devis",
+  "stat_projects": "Projets réalisés",
+  "stat_experience": "Ans d'expérience",
+  "stat_area": "m² construits",
+
+  "trust_warranty": "Garantie 2 ans",
+  "trust_delivery": "Livraison en 45 jours",
+  "trust_tbdy": "Conforme TBDY 2026",
+
+  "services_label": "Nos services",
+  "services_title": "Solutions acier complètes",
+  "services_desc": "Un accompagnement professionnel à chaque étape des systèmes à ossature acier légère.",
+
+  "packages_label": "Forfaits",
+  "packages_title": "Choisissez le bon forfait",
+  "packages_desc": "Des solutions pour tous les projets. Contactez-nous pour un devis détaillé.",
+  "pkg_contact_btn": "Nous contacter",
+
+  "projects_label": "Projets",
+  "projects_title": "Réalisations",
+  "projects_desc": "Une sélection de projets réalisés avec des systèmes ossature acier légère.",
+  "filter_all": "Tous",
+  "filter_residential": "Résidentiel",
+  "filter_commercial": "Commercial",
+  "filter_industrial": "Industriel",
+
+  "blog_label": "Blog",
+  "blog_title": "Articles techniques & Actualités",
+  "blog_desc": "Contenu expert sur les systèmes acier léger, le calcul de structure et la réglementation 2026.",
+  "blog_read_more": "Lire la suite",
+  "blog_coming_soon": "Bientôt",
+  "blog_all": "Tous les articles",
+
+  "about_label": "À propos",
+  "about_title": "Votre partenaire acier léger de confiance",
+  "about_desc": "MefSteel propose des années d'expérience dans les systèmes à ossature acier légère. Matériaux de qualité, savoir-faire expert et livraison dans les délais.",
+
+  "contact_label": "Contact",
+  "contact_title": "Contactez-nous",
+  "contact_desc": "Écrivez-nous pour un devis ou des informations sur votre projet.",
+
+  "form_name": "Nom et prénom",
+  "form_phone": "Téléphone",
+  "form_email": "E-mail",
+  "form_service": "Type de service",
+  "form_message": "Message",
+  "form_submit": "Envoyer le message →",
+  "form_placeholder_name": "Votre nom complet",
+  "form_placeholder_phone": "+90 5__ ___ __ __",
+  "form_placeholder_email": "exemple@email.com",
+  "form_placeholder_message": "Décrivez brièvement votre projet..."
+}

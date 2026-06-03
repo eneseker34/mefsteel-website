@@ -1,0 +1,66 @@
+{
+  "nav_services": "Leistungen",
+  "nav_packages": "Pakete",
+  "nav_projects": "Projekte",
+  "nav_blog": "Blog",
+  "nav_about": "Über uns",
+  "nav_contact": "Kontakt",
+
+  "hero_badge": "Ihr zuverlässiger Stahlpartner aus der Türkei",
+  "hero_title_1": "Starke Gebäude",
+  "hero_title_2": "aus Leichtstahlbau",
+  "hero_title_3": "– Wir bauen sie",
+  "hero_desc": "Von der Planung bis zur Montage begleiten wir Sie in jedem Schritt. Unser Expertenteam realisiert Ihre Projekte mit Leichtstahlsystemen.",
+  "hero_btn_primary": "Projekte ansehen",
+  "hero_btn_secondary": "Angebot einholen",
+  "stat_projects": "Abgeschlossene Projekte",
+  "stat_experience": "Jahre Erfahrung",
+  "stat_area": "m² Nutzfläche",
+
+  "trust_warranty": "2 Jahre Garantie",
+  "trust_delivery": "45 Tage Lieferzeit",
+  "trust_tbdy": "TBDY 2026 konform",
+
+  "services_label": "Unsere Leistungen",
+  "services_title": "Ganzheitliche Stahllösungen",
+  "services_desc": "Professionelle Unterstützung in jeder Phase des Leichtstahlbaus.",
+
+  "packages_label": "Leistungspakete",
+  "packages_title": "Das richtige Paket wählen",
+  "packages_desc": "Lösungen für Projekte jeder Größe. Kontaktieren Sie uns für ein detailliertes Angebot.",
+  "pkg_contact_btn": "Kontakt aufnehmen",
+
+  "projects_label": "Projekte",
+  "projects_title": "Abgeschlossene Arbeiten",
+  "projects_desc": "Ausgewählte Projekte, realisiert mit Leichtstahlsystemen.",
+  "filter_all": "Alle",
+  "filter_residential": "Wohnbau",
+  "filter_commercial": "Gewerbe",
+  "filter_industrial": "Industrie",
+
+  "blog_label": "Blog",
+  "blog_title": "Fachartikel & Branchennews",
+  "blog_desc": "Expertenwissen zu Leichtstahlsystemen, Tragwerksberechnung und der Norm 2026.",
+  "blog_read_more": "Weiterlesen",
+  "blog_coming_soon": "Demnächst",
+  "blog_all": "Alle Artikel",
+
+  "about_label": "Über uns",
+  "about_title": "Ihr zuverlässiger Leichtstahlpartner",
+  "about_desc": "MefSteel bietet jahrelange Erfahrung in Leichtstahlsystemen. Qualitätsmaterialien, Fachkompetenz und pünktliche Lieferung stehen bei uns an erster Stelle.",
+
+  "contact_label": "Kontakt",
+  "contact_title": "Kontakt aufnehmen",
+  "contact_desc": "Schreiben Sie uns für ein Angebot oder Informationen zu Ihrem Projekt.",
+
+  "form_name": "Vor- und Nachname",
+  "form_phone": "Telefon",
+  "form_email": "E-Mail",
+  "form_service": "Leistungsart",
+  "form_message": "Nachricht",
+  "form_submit": "Nachricht senden →",
+  "form_placeholder_name": "Ihr vollständiger Name",
+  "form_placeholder_phone": "+90 5__ ___ __ __",
+  "form_placeholder_email": "beispiel@email.com",
+  "form_placeholder_message": "Kurze Beschreibung Ihres Projekts..."
+}

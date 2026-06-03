@@ -1,0 +1,66 @@
+{
+  "nav_services": "Services",
+  "nav_packages": "Packages",
+  "nav_projects": "Projects",
+  "nav_blog": "Blog",
+  "nav_about": "About",
+  "nav_contact": "Contact",
+
+  "hero_badge": "Turkey's Trusted Steel Partner",
+  "hero_title_1": "Building Strong",
+  "hero_title_2": "Structures",
+  "hero_title_3": "with Light Steel",
+  "hero_desc": "We are with you at every stage from design to assembly. Our expert team realizes your projects with light steel framing systems.",
+  "hero_btn_primary": "View Projects",
+  "hero_btn_secondary": "Get a Quote",
+  "stat_projects": "Completed Projects",
+  "stat_experience": "Years of Experience",
+  "stat_area": "m² Built Area",
+
+  "trust_warranty": "2-Year Warranty",
+  "trust_delivery": "45-Day Delivery",
+  "trust_tbdy": "TBDY 2026 Compliant",
+
+  "services_label": "Our Services",
+  "services_title": "End-to-End Steel Solutions",
+  "services_desc": "Professional support at every stage of light steel framing systems.",
+
+  "packages_label": "Service Packages",
+  "packages_title": "Choose the Right Package",
+  "packages_desc": "Solutions for projects of every scale. Contact us for a detailed quote.",
+  "pkg_contact_btn": "Contact Us",
+
+  "projects_label": "Projects",
+  "projects_title": "Completed Works",
+  "projects_desc": "Selected projects built with light steel framing systems.",
+  "filter_all": "All",
+  "filter_residential": "Residential",
+  "filter_commercial": "Commercial",
+  "filter_industrial": "Industrial",
+
+  "blog_label": "Blog",
+  "blog_title": "Technical Articles & Industry News",
+  "blog_desc": "Expert content from our team on light steel systems, structural analysis and the 2026 regulation.",
+  "blog_read_more": "Read More",
+  "blog_coming_soon": "Coming Soon",
+  "blog_all": "All Articles",
+
+  "about_label": "About Us",
+  "about_title": "Your Trusted Light Steel Partner",
+  "about_desc": "MefSteel delivers light steel framing systems with years of experience. Quality materials, expert craftsmanship and on-time delivery are our priorities.",
+
+  "contact_label": "Contact",
+  "contact_title": "Get in Touch",
+  "contact_desc": "Contact us to get a quote or information about your project.",
+
+  "form_name": "Full Name",
+  "form_phone": "Phone",
+  "form_email": "E-Mail",
+  "form_service": "Service Type",
+  "form_message": "Message",
+  "form_submit": "Send Message →",
+  "form_placeholder_name": "Your Full Name",
+  "form_placeholder_phone": "+90 5__ ___ __ __",
+  "form_placeholder_email": "example@email.com",
+  "form_placeholder_message": "Brief description of your project..."
+}

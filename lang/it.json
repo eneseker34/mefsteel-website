@@ -1,0 +1,66 @@
+{
+  "nav_services": "Servizi",
+  "nav_packages": "Pacchetti",
+  "nav_projects": "Progetti",
+  "nav_blog": "Blog",
+  "nav_about": "Chi siamo",
+  "nav_contact": "Contatti",
+
+  "hero_badge": "Il vostro partner affidabile per l'acciaio in Turchia",
+  "hero_title_1": "Strutture solide",
+  "hero_title_2": "in acciaio leggero",
+  "hero_title_3": "— le costruiamo noi",
+  "hero_desc": "Vi accompagniamo in ogni fase, dalla progettazione al montaggio. Il nostro team di esperti realizza i vostri progetti con sistemi in acciaio leggero.",
+  "hero_btn_primary": "Vedi i progetti",
+  "hero_btn_secondary": "Richiedi un preventivo",
+  "stat_projects": "Progetti completati",
+  "stat_experience": "Anni di esperienza",
+  "stat_area": "m² costruiti",
+
+  "trust_warranty": "Garanzia 2 anni",
+  "trust_delivery": "Consegna in 45 giorni",
+  "trust_tbdy": "Conforme TBDY 2026",
+
+  "services_label": "I nostri servizi",
+  "services_title": "Soluzioni acciaio complete",
+  "services_desc": "Supporto professionale in ogni fase dei sistemi in acciaio leggero.",
+
+  "packages_label": "Pacchetti",
+  "packages_title": "Scegli il pacchetto giusto",
+  "packages_desc": "Soluzioni per progetti di ogni dimensione. Contattateci per un preventivo dettagliato.",
+  "pkg_contact_btn": "Contattaci",
+
+  "projects_label": "Progetti",
+  "projects_title": "Lavori completati",
+  "projects_desc": "Una selezione di progetti realizzati con sistemi in acciaio leggero.",
+  "filter_all": "Tutti",
+  "filter_residential": "Residenziale",
+  "filter_commercial": "Commerciale",
+  "filter_industrial": "Industriale",
+
+  "blog_label": "Blog",
+  "blog_title": "Articoli tecnici & Notizie",
+  "blog_desc": "Contenuti esperti su sistemi in acciaio leggero, calcolo strutturale e normativa 2026.",
+  "blog_read_more": "Leggi di più",
+  "blog_coming_soon": "Prossimamente",
+  "blog_all": "Tutti gli articoli",
+
+  "about_label": "Chi siamo",
+  "about_title": "Il vostro partner affidabile in acciaio leggero",
+  "about_desc": "MefSteel offre anni di esperienza nei sistemi in acciaio leggero. Materiali di qualità, competenza esperta e consegna puntuale.",
+
+  "contact_label": "Contatti",
+  "contact_title": "Contattateci",
+  "contact_desc": "Scriveteci per un preventivo o informazioni sul vostro progetto.",
+
+  "form_name": "Nome e cognome",
+  "form_phone": "Telefono",
+  "form_email": "E-mail",
+  "form_service": "Tipo di servizio",
+  "form_message": "Messaggio",
+  "form_submit": "Invia messaggio →",
+  "form_placeholder_name": "Il vostro nome completo",
+  "form_placeholder_phone": "+90 5__ ___ __ __",
+  "form_placeholder_email": "esempio@email.com",
+  "form_placeholder_message": "Breve descrizione del vostro progetto..."
+}
