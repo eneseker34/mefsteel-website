@@ -1,4 +1,4 @@
-{
+﻿{
   "nav_services": "Servizi",
   "nav_packages": "Pacchetti",
   "nav_projects": "Progetti",
@@ -17,9 +17,8 @@
   "stat_projects": "Progetti completati",
   "stat_experience": "Anni di esperienza",
   "stat_area": "m² costruiti",
-
-  "trust_warranty": "Garanzia 2 anni",
   "trust_delivery": "Consegna in 45 giorni",
+  "trust_region": "Tracia & Istanbul",
   "trust_tbdy": "Conforme TBDY 2026",
 
   "services_label": "I nostri servizi",
@@ -133,3 +132,4 @@
   "footer_copyright": "© 2026 MefSteel. Tutti i diritti riservati.",
   "footer_tagline": "Sistemi in acciaio leggero — mefsteel.com"
 }
+

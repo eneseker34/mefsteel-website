@@ -1,4 +1,4 @@
-{
+﻿{
   "nav_services": "Services",
   "nav_packages": "Forfaits",
   "nav_projects": "Projets",
@@ -17,9 +17,8 @@
   "stat_projects": "Projets réalisés",
   "stat_experience": "Ans d'expérience",
   "stat_area": "m² construits",
-
-  "trust_warranty": "Garantie 2 ans",
   "trust_delivery": "Livraison en 45 jours",
+  "trust_region": "Thrace & Istanbul",
   "trust_tbdy": "Conforme TBDY 2026",
 
   "services_label": "Nos services",
@@ -133,3 +132,4 @@
   "footer_copyright": "© 2026 MefSteel. Tous droits réservés.",
   "footer_tagline": "Systèmes à ossature acier légère — mefsteel.com"
 }
+

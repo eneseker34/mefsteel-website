@@ -1,4 +1,4 @@
-{
+﻿{
   "nav_services": "Services",
   "nav_packages": "Packages",
   "nav_projects": "Projects",
@@ -17,9 +17,8 @@
   "stat_projects": "Completed Projects",
   "stat_experience": "Years of Experience",
   "stat_area": "m² Built Area",
-
-  "trust_warranty": "2-Year Warranty",
   "trust_delivery": "45-Day Delivery",
+  "trust_region": "Thrace & Istanbul",
   "trust_tbdy": "TBDY 2026 Compliant",
 
   "services_label": "Our Services",
@@ -133,3 +132,4 @@
   "footer_copyright": "© 2026 MefSteel. All rights reserved.",
   "footer_tagline": "Light Steel Framing Systems — mefsteel.com"
 }
+

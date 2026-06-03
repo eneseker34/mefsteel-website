@@ -1,4 +1,4 @@
-{
+﻿{
   "nav_services": "Leistungen",
   "nav_packages": "Pakete",
   "nav_projects": "Projekte",
@@ -17,9 +17,8 @@
   "stat_projects": "Abgeschlossene Projekte",
   "stat_experience": "Jahre Erfahrung",
   "stat_area": "m² Nutzfläche",
-
-  "trust_warranty": "2 Jahre Garantie",
   "trust_delivery": "45 Tage Lieferzeit",
+  "trust_region": "Thrakien & Istanbul",
   "trust_tbdy": "TBDY 2026 konform",
 
   "services_label": "Unsere Leistungen",
@@ -133,3 +132,4 @@
   "footer_copyright": "© 2026 MefSteel. Alle Rechte vorbehalten.",
   "footer_tagline": "Leichtstahlbausysteme — mefsteel.com"
 }
+

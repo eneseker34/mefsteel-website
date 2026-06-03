@@ -175,12 +175,12 @@ const counterObserver = new IntersectionObserver((entries) => {
       animateCounter(entry.target);
     }
   });
-}, { threshold: 0.5 });
+}, { threshold: 0.1 });
 
 document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
 
-// Layout tamamlandıktan sonra görünür sayaçları tetikle
-requestAnimationFrame(() => requestAnimationFrame(() => {
+// Sayfa yüklenir yüklenmez görünür sayaçları tetikle (500ms gecikme ile)
+setTimeout(() => {
   document.querySelectorAll('[data-target]').forEach(el => {
     if (!el.dataset.counted) {
       const rect = el.getBoundingClientRect();
@@ -190,7 +190,7 @@ requestAnimationFrame(() => requestAnimationFrame(() => {
       }
     }
   });
-}));
+}, 500);
 
 // ===== CARDSTACK 3D FAN =====
 const KATEGORI_ETIKET = { konut: 'Konut', ticari: 'Ticari', endustriyel: 'Endüstriyel', diger: 'Diğer' };

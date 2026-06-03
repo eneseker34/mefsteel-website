@@ -4,7 +4,9 @@ const LANGS = {
   en: { flag: '🇬🇧', label: 'English' },
   de: { flag: '🇩🇪', label: 'Deutsch' },
   fr: { flag: '🇫🇷', label: 'Français' },
-  it: { flag: '🇮🇹', label: 'Italiano' }
+  it: { flag: '🇮🇹', label: 'Italiano' },
+  bg: { flag: '🇧🇬', label: 'Български' },
+  el: { flag: '🇬🇷', label: 'Ελληνικά' }
 };
 
 let currentLang = 'tr';

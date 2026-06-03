@@ -1,4 +1,4 @@
-{
+﻿{
   "nav_services": "Hizmetler",
   "nav_packages": "Paketler",
   "nav_projects": "Projeler",
@@ -17,9 +17,8 @@
   "stat_projects": "Tamamlanan Proje",
   "stat_experience": "Yıllık Deneyim",
   "stat_area": "m² Yapı Alanı",
-
-  "trust_warranty": "2 Yıl Garanti",
   "trust_delivery": "45 Günde Teslim",
+  "trust_region": "Trakya & İstanbul",
   "trust_tbdy": "TBDY 2026 Uyumlu",
 
   "services_label": "Hizmetlerimiz",
@@ -133,3 +132,4 @@
   "footer_copyright": "© 2026 MefSteel. Tüm hakları saklıdır.",
   "footer_tagline": "Hafif Çelik Yapı Sistemleri — mefsteel.com"
 }
+
