@@ -1579,14 +1579,20 @@ footer {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: -webkit-fill-available;
     background: rgba(13,27,42,0.99);
     justify-content: center;
     align-items: center;
     gap: 24px;
     z-index: 1100;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding: 80px 20px 40px;
+    box-sizing: border-box;
   }
   nav.open a {
     font-size: 1.1rem;
