@@ -1,5 +1,6 @@
-// ===== WEBGL SHADER =====
+// ===== WEBGL SHADER — Mobilden devre dışı =====
 (function initShader(canvasId, opacity) {
+  if (window.innerWidth < 768) return; // Mobilde WebGL kapalı
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
   const gl = canvas.getContext('webgl');
@@ -72,6 +73,7 @@
 
 // Hero shader başlatıldı, pricing shader ayrıca başlatılıyor
 (function initPricingShader() {
+  if (window.innerWidth < 768) return; // Mobilde kapalı
   const canvas = document.getElementById('pricing-shader');
   if (!canvas) return;
   const gl = canvas.getContext('webgl');
@@ -478,20 +480,18 @@ function bindLightbox() {
 
 // ===== GALERİ — manifest.json'dan yükle =====
 const KAT = { konut: 'Konut', ticari: 'Ticari', endustriyel: 'Endüstriyel', diger: 'Diğer' };
+const GALERI_LIMIT = 24; // İlk yükleme limiti
+let tumProjeler = [];
+let mevcutKat = 'tumu';
 
-function buildGallery(projects) {
+function renderGalleryItems(projects) {
   const grid = document.getElementById('gallery-grid');
   if (!grid) return;
-  if (!projects.length) {
-    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:#8B9BAA">
-      <div style="font-size:3rem;margin-bottom:16px">🏗️</div>
-      <div style="font-size:1.1rem;font-weight:600;color:#E8EDF2;margin-bottom:8px">Projelerimiz yükleniyor</div>
-      <div style="font-size:0.9rem">Fotoğraflar yakında burada olacak. Detay için <a href="#iletisim" style="color:#F4A261">bizimle iletişime geçin</a>.</div>
-    </div>`;
-    return;
-  }
 
-  grid.innerHTML = projects.map((p, i) => {
+  const filtered = mevcutKat === 'tumu' ? projects : projects.filter(p => p.kategori === mevcutKat);
+  const allImgs = projects.map(p => p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya);
+
+  const html = filtered.slice(0, GALERI_LIMIT).map((p, i) => {
     const img = p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya;
     const kat = p.kategori || 'konut';
     const tag = KAT[kat] || 'Proje';
@@ -508,23 +508,66 @@ function buildGallery(projects) {
     </div>`;
   }).join('');
 
+  // Daha Fazla butonu
+  const kalan = filtered.length - GALERI_LIMIT;
+  const dahaFazla = kalan > 0
+    ? `<div class="gallery-more-btn" id="gallery-more" style="grid-column:1/-1;text-align:center;padding:32px 0">
+        <button onclick="galeriTumunu()" style="background:linear-gradient(135deg,#F4A261,#E76F51);color:#fff;border:none;padding:14px 36px;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer">
+          Tümünü Gör (${kalan} daha)
+        </button>
+       </div>`
+    : '';
+
+  grid.innerHTML = html + dahaFazla;
+
+  grid.querySelectorAll('.gallery-item').forEach((item, idx) => {
+    const realIdx = projects.findIndex(p => 'images/projeler/' + p.dosya === item.dataset.img || p.dosya === item.dataset.img);
+    item.addEventListener('click', () => openLightbox(allImgs, realIdx >= 0 ? realIdx : idx));
+  });
+}
+
+function galeriTumunu() {
+  const grid = document.getElementById('gallery-grid');
+  if (!grid) return;
+  const filtered = mevcutKat === 'tumu' ? tumProjeler : tumProjeler.filter(p => p.kategori === mevcutKat);
+  const allImgs = tumProjeler.map(p => p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya);
+  grid.innerHTML = filtered.map((p, i) => {
+    const img = p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya;
+    const kat = p.kategori || 'konut';
+    const big = i === 0 ? ' big' : '';
+    return `<div class="gallery-item${big}" data-cat="${kat}" data-img="${img}">
+      <img src="${img}" alt="${p.isim}" loading="lazy" onerror="this.parentNode.style.background='#1E3A5F'">
+      <div class="gi-overlay"><div class="gi-tag">${KAT[kat]||'Proje'}</div><div class="gi-title">${p.isim}</div></div>
+    </div>`;
+  }).join('');
+  grid.querySelectorAll('.gallery-item').forEach((item, idx) => {
+    item.addEventListener('click', () => openLightbox(allImgs, idx));
+  });
+}
+
+function buildGallery(projects) {
+  tumProjeler = projects;
+  const grid = document.getElementById('gallery-grid');
+  if (!grid) return;
+  if (!projects.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:#8B9BAA">
+      <div style="font-size:3rem;margin-bottom:16px">🏗️</div>
+      <div style="font-size:1.1rem;font-weight:600;color:#E8EDF2;margin-bottom:8px">Projelerimiz yükleniyor</div>
+    </div>`;
+    return;
+  }
+
+  renderGalleryItems(projects);
+
   // Filtre
   const filterBtns = document.querySelectorAll('.gf-btn');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const cat = btn.dataset.cat;
-      grid.querySelectorAll('.gallery-item').forEach(item => {
-        item.classList.toggle('hidden', cat !== 'tumu' && item.dataset.cat !== cat);
-      });
+      mevcutKat = btn.dataset.cat;
+      renderGalleryItems(tumProjeler);
     });
-  });
-
-  // Lightbox
-  const allImgs = projects.map(p => p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya);
-  grid.querySelectorAll('.gallery-item').forEach((item, idx) => {
-    item.addEventListener('click', () => openLightbox(allImgs, idx));
   });
 }
 
