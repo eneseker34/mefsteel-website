@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MefSteel — İstatistikler</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0D1117; color: #E8EDF2; font-family: 'Inter', sans-serif; min-height: 100vh; padding: 40px 20px; }
+  h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; }
+  .subtitle { color: #8B9BAA; font-size: 0.9rem; margin-bottom: 40px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; max-width: 900px; }
+  .card { background: #161B22; border: 1px solid #21262D; border-radius: 12px; padding: 24px 20px; }
+  .card-label { font-size: 0.75rem; color: #8B9BAA; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
+  .card-value { font-size: 2.4rem; font-weight: 700; color: #F4A261; line-height: 1; }
+  .card-icon { font-size: 1.4rem; margin-bottom: 12px; }
+  .refresh-btn { margin-top: 32px; background: #F4A261; color: #0D1117; border: none; padding: 10px 24px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
+  .refresh-btn:hover { background: #e8914f; }
+  .updated { margin-top: 12px; font-size: 0.8rem; color: #8B9BAA; }
+  .error { color: #E74C3C; font-size: 0.8rem; margin-top: 8px; }
+  .loading { opacity: 0.4; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h1>📊 MefSteel İstatistikler</h1>
+<p class="subtitle" id="updated-time">Yükleniyor...</p>
+
+<div class="grid">
+  <div class="card">
+    <div class="card-icon">👁️</div>
+    <div class="card-label">Toplam Ziyaret</div>
+    <div class="card-value loading" id="ziyaretci">—</div>
+  </div>
+  <div class="card">
+    <div class="card-icon">💬</div>
+    <div class="card-label">WhatsApp Tıklaması</div>
+    <div class="card-value loading" id="whatsapp">—</div>
+  </div>
+  <div class="card">
+    <div class="card-icon">📋</div>
+    <div class="card-label">Teklif Al Tıklaması</div>
+    <div class="card-value loading" id="teklif-al">—</div>
+  </div>
+  <div class="card">
+    <div class="card-icon">📩</div>
+    <div class="card-label">İletişime Geç</div>
+    <div class="card-value loading" id="iletisim-gec">—</div>
+  </div>
+  <div class="card">
+    <div class="card-icon">✅</div>
+    <div class="card-label">Form Gönderildi</div>
+    <div class="card-value loading" id="form-gonder">—</div>
+  </div>
+  <div class="card">
+    <div class="card-icon">🏗️</div>
+    <div class="card-label">Projeler Tıklaması</div>
+    <div class="card-value loading" id="projeler-gor">—</div>
+  </div>
+</div>
+
+<button class="refresh-btn" onclick="yukle()">↻ Yenile</button>
+<p id="hata" class="error"></p>
+
+<script>
+const BASE = 'https://api.counterapi.dev/v1/mefsteel-eker';
+const KEYS = ['ziyaretci','whatsapp','teklif-al','iletisim-gec','form-gonder','projeler-gor'];
+
+async function yukle() {
+  document.getElementById('updated-time').textContent = 'Yükleniyor...';
+  document.getElementById('hata').textContent = '';
+  KEYS.forEach(k => {
+    const el = document.getElementById(k);
+    if (el) { el.textContent = '—'; el.classList.add('loading'); }
+  });
+
+  try {
+    const results = await Promise.all(
+      KEYS.map(k => fetch(BASE + '/' + k).then(r => r.json()).catch(() => ({ count: 0 })))
+    );
+    KEYS.forEach((k, i) => {
+      const el = document.getElementById(k);
+      if (el) {
+        el.textContent = (results[i].count ?? results[i].value ?? 0).toLocaleString('tr-TR');
+        el.classList.remove('loading');
+      }
+    });
+    const now = new Date().toLocaleString('tr-TR');
+    document.getElementById('updated-time').textContent = 'Son güncelleme: ' + now;
+  } catch (e) {
+    document.getElementById('hata').textContent = 'Veri alınamadı: ' + e.message;
+    document.getElementById('updated-time').textContent = '';
+  }
+}
+
+yukle();
+</script>
+</body>
+</html>

@@ -577,6 +577,37 @@ if (form) {
   });
 }
 
+// ===== SAYAÇ TAKİP =====
+(function() {
+  const BASE = 'https://api.counterapi.dev/v1/mefsteel-eker';
+  function hit(key) { fetch(BASE + '/' + key + '/up').catch(() => {}); }
+
+  // Ziyaretçi sayacı (bot engellemek için sessionStorage ile tek sayım)
+  if (!sessionStorage.getItem('sv')) {
+    sessionStorage.setItem('sv', '1');
+    hit('ziyaretci');
+  }
+
+  // Hero "Teklif Al"
+  document.querySelector('a.btn-secondary')?.addEventListener('click', () => hit('teklif-al'));
+
+  // Projelerimizi Gör
+  document.querySelector('a.btn-primary')?.addEventListener('click', () => hit('projeler-gor'));
+
+  // Paket "İletişime Geç" butonları
+  document.querySelectorAll('.pricing-btn').forEach(el =>
+    el.addEventListener('click', () => hit('iletisim-gec'))
+  );
+
+  // WhatsApp linkleri
+  document.querySelectorAll('a[href*="wa.me"]').forEach(el =>
+    el.addEventListener('click', () => hit('whatsapp'))
+  );
+
+  // İletişim formu gönder
+  document.getElementById('contact-form')?.addEventListener('submit', () => hit('form-gonder'));
+})();
+
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
