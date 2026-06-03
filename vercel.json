@@ -15,12 +15,5 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.mefsteel.com" }],
-      "destination": "https://mefsteel.com/:path*",
-      "permanent": true
-    }
-  ]
+  "redirects": []
 }
