@@ -32,7 +32,7 @@ foreach ($kat in $KATEGORILER) {
         Copy-Item $d.FullName $hedefDosya -Force
         $toplam++
     }
-    Write-Host "   $kat: $($dosyalar.Count) fotograf" -ForegroundColor Gray
+    Write-Host "   ${kat}: $($dosyalar.Count) fotograf" -ForegroundColor Gray
 }
 
 # Kok klasordeki fotograflar (kategorisiz)

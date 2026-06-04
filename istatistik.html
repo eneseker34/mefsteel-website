@@ -69,6 +69,13 @@
 const BASE = 'https://api.counterapi.dev/v1/mefsteel-eker';
 const KEYS = ['ziyaretci','whatsapp','teklif-al','iletisim-gec','form-gonder','projeler-gor'];
 
+async function fetchKey(key) {
+  const res = await fetch(BASE + '/' + key, { cache: 'no-store' });
+  if (!res.ok) throw new Error('HTTP ' + res.status);
+  const json = await res.json();
+  return json.count ?? json.value ?? json.data?.count ?? 0;
+}
+
 async function yukle() {
   document.getElementById('updated-time').textContent = 'Yükleniyor...';
   document.getElementById('hata').textContent = '';
@@ -77,22 +84,30 @@ async function yukle() {
     if (el) { el.textContent = '—'; el.classList.add('loading'); }
   });
 
-  try {
-    const results = await Promise.all(
-      KEYS.map(k => fetch(BASE + '/' + k).then(r => r.json()).catch(() => ({ count: 0 })))
-    );
-    KEYS.forEach((k, i) => {
-      const el = document.getElementById(k);
-      if (el) {
-        el.textContent = (results[i].count ?? results[i].value ?? 0).toLocaleString('tr-TR');
-        el.classList.remove('loading');
-      }
-    });
-    const now = new Date().toLocaleString('tr-TR');
-    document.getElementById('updated-time').textContent = 'Son güncelleme: ' + now;
-  } catch (e) {
-    document.getElementById('hata').textContent = 'Veri alınamadı: ' + e.message;
+  let hataSayisi = 0;
+  const results = await Promise.all(
+    KEYS.map(k =>
+      fetchKey(k).catch(e => { hataSayisi++; return 0; })
+    )
+  );
+
+  KEYS.forEach((k, i) => {
+    const el = document.getElementById(k);
+    if (el) {
+      el.textContent = Number(results[i]).toLocaleString('tr-TR');
+      el.classList.remove('loading');
+    }
+  });
+
+  const now = new Date().toLocaleString('tr-TR');
+  if (hataSayisi === KEYS.length) {
+    document.getElementById('hata').textContent = '⚠️ counterapi.dev\'e ulaşılamıyor. VPN açıksa kapat ve tekrar dene.';
     document.getElementById('updated-time').textContent = '';
+  } else if (hataSayisi > 0) {
+    document.getElementById('hata').textContent = hataSayisi + ' sayaç okunamadı.';
+    document.getElementById('updated-time').textContent = 'Son güncelleme: ' + now;
+  } else {
+    document.getElementById('updated-time').textContent = 'Son güncelleme: ' + now;
   }
 }
 
