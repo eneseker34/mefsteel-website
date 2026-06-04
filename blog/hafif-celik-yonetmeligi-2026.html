@@ -103,145 +103,70 @@
       <div class="post-callout-title">⚠️ Geçiş Takvimi</div>
       <p>Yönetmelik yayım tarihinde yürürlüğe girdi; ancak mevcut projeler için
       <strong>1 Ocak 2027'ye kadar uyum süresi</strong> tanındı. Bu tarihten itibaren
-      ruhsat başvurularında uyumlu statik hesap raporu zorunlu.</p>
+      ruhsat başvurularında uyumlu mühendislik raporu zorunlu.</p>
     </div>
 
-    <h2>Yönetmelik Ne Getiriyor? Ana Maddeler</h2>
+    <h2>Yönetmelik Ne Getiriyor?</h2>
 
-    <h3>1. Profil Standartları (Madde 3 &amp; Tablo 3.1)</h3>
+    <h3>1. Profil Standartları</h3>
     <p>
-      Kullanılacak galvanizli çelik profillere ilk kez kesin sınırlar getirildi:
+      Kullanılacak galvanizli çelik profillere ilk kez kesin sınırlar getirildi.
+      Minimum çelik sınıfı, çinko kaplama kalitesi ve profil geometrisine dair
+      zorunlu şartlar belirlendi. Pratikte en yaygın kullanılan C90, C100, C140,
+      C200 ve C250 serisi profiller yönetmelik kapsamında değerlendirilebiliyor.
     </p>
 
-    <table class="post-table">
-      <thead>
-        <tr>
-          <th>Parametre</th>
-          <th>Minimum</th>
-          <th>Açıklama</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Stud et kalınlığı (t)</td><td>≥ 0.9 mm</td><td>Tasarım kalınlığı</td></tr>
-        <tr><td>Stud yüksekliği (h)</td><td>≥ 70 mm</td><td>C/U profil yüksekliği</td></tr>
-        <tr><td>b/t oranı</td><td>≤ 90</td><td>Kanat/et oranı (mutlak sınır)</td></tr>
-        <tr><td>c/t oranı</td><td>≤ 60</td><td>Dudak/et oranı</td></tr>
-        <tr><td>Çelik sınıfı</td><td>S250GD+Z</td><td>Minimum akma dayanımı 250 MPa</td></tr>
-        <tr><td>Çinko kaplama</td><td>Z275</td><td>275 g/m² her iki yüz</td></tr>
-      </tbody>
-    </table>
-
+    <h3>2. Deprem Hesabı</h3>
     <p>
-      Pratikte en yaygın kullanılan profiller C90, C100, C140, C200 ve C250 serisi olmaya devam
-      ediyor. Yönetmelik bu profillere yasak getirmiyor; ancak hesabın bu tabloya göre
-      yapılmasını zorunlu kılıyor.
+      Yönetmeliğin en kritik maddesidir. Hafif çelik yapılar artık TBDY 2018 kapsamında
+      değerlendiriliyor. Kaplama sistemine (OSB veya alçıpan) göre farklı deprem yük
+      azaltma ve rijitlik değerleri uygulanıyor. Bu hesapların doğru yapılması hem
+      ruhsat hem de yapı güvenliği açısından zorunlu.
     </p>
 
-    <h3>2. Deprem Hesabı — TBDY 2018 Entegrasyonu (Madde 10)</h3>
+    <h3>3. Bağlantı Hesabı</h3>
     <p>
-      Yönetmeliğin en kritik maddesi budur. Hafif çelik yapılar artık TBDY 2018'in
-      <strong>Bölüm 10</strong>'u kapsamında değerlendiriliyor. Temel kurallar:
-    </p>
-    <ul>
-      <li><strong>T = 0.200s SABİT</strong> — Periyot hesabı için (Madde 10.2.6.1)</li>
-      <li>Deprem yük azaltma katsayısı R ve D değerleri OSB/alçıpan kaplama tipine göre değişiyor</li>
-      <li>D1 sistemi (OSB 12mm kaplama): R=4, D=2.5</li>
-      <li>D2 sistemi (alçıpan kaplama): R=3, D=2.5</li>
-      <li>Shear wall rijitliği (Ga_eff): D1 için ≈0.55 kN/mm/m, D2 için ≈0.35 kN/mm/m</li>
-    </ul>
-
-    <div class="post-callout">
-      <div class="post-callout-title">💡 Mühendis Notu</div>
-      <p>Ötelenme hesabında konsol formülü (δ = V·h³/3EI) <strong>kullanılmamalıdır</strong>.
-      Shear wall sistemi için doğru formül: δ = V / (Ga_eff × L_duvar).
-      Konsol formülü gerçek değerden ~100 kat büyük sonuç verir.</p>
-    </div>
-
-    <h3>3. Vida Bağlantısı Hesabı (Madde 8)</h3>
-    <p>
-      Bağlantı elemanlarına da standart getirildi. Yönetmelik Madde 8.2'ye göre
-      dayanım azaltma katsayısı <strong>φ = 0.50</strong> olarak belirlendi (AISI S100
-      ile aynı; bu güvenli tarafta bir yaklaşım).
-    </p>
-    <p>
-      Pull-through (delme) kontrolü için (Madde 8.3):
-    </p>
-    <ul>
-      <li>Pnot = 0.85 × t₁ × dw × fu / 1000 [kN]</li>
-      <li>t₁: vida başının geçtiği levha kalınlığı (mm)</li>
-      <li>dw: vida başı/rondela çapı — No.10 vida için ≈ 10mm</li>
-    </ul>
-
-    <h3>4. Yangın Hesabı (Madde 9)</h3>
-    <p>
-      2026 yönetmeliğinin önceki uygulamalardan en önemli farkı: yangın hesabı artık
-      zorunlu. EN 1993-1-2 standardına göre kritik sıcaklık (θcr) hesaplanmalı ve
-      gerekli koruma önlemi (alçıpan kalınlığı, yangın bariyer levhası vb.) raporda
-      belirtilmeli.
+      Vida ve bağlantı elemanları için standart dayanım ve güvenlik katsayıları
+      belirlendi. Her projenin bağlantı detayı ayrıca hesaplanmak zorunda.
     </p>
 
-    <h2>11 Zorunlu Kontrol Maddesi</h2>
+    <h3>4. Yangın Hesabı</h3>
     <p>
-      Uyumlu bir statik hesap raporu aşağıdaki 11 kontrolü içermek zorundadır:
+      Önceki uygulamalardan en önemli fark budur: yangın hesabı artık zorunlu.
+      Yapı kullanım sınıfına göre gerekli yangın dayanım süresi belirleniyor
+      ve uygun koruma önlemleri raporda gösterilmek zorunda.
     </p>
 
-    <table class="post-table">
-      <thead>
-        <tr><th>#</th><th>Kontrol</th><th>Standart</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>1</td><td>Enkesit Dayanımı</td><td>AISI S100 / Mad. 4</td></tr>
-        <tr><td>2</td><td>Dış Stud Kontrolü</td><td>Mad. 5.1</td></tr>
-        <tr><td>3</td><td>İç Stud Kontrolü</td><td>Mad. 5.2</td></tr>
-        <tr><td>4</td><td>Ray (Track) Kontrolü</td><td>Mad. 5.3</td></tr>
-        <tr><td>5</td><td>Çatı Makası Kontrolü</td><td>Mad. 6</td></tr>
-        <tr><td>6</td><td>Vida Bağlantısı</td><td>Mad. 8</td></tr>
-        <tr><td>7</td><td>Deprem Yükü</td><td>TBDY Mad. 10</td></tr>
-        <tr><td>8</td><td>Göreli Kat Ötelemesi</td><td>Mad. 10.2.8</td></tr>
-        <tr><td>9</td><td>Şehim (Sehim) Kontrolü</td><td>Mad. 7 — L/360</td></tr>
-        <tr><td>10</td><td>Ankraj Hesabı</td><td>Mad. 11</td></tr>
-        <tr><td>11</td><td>Yangın Dayanımı</td><td>Mad. 9 / EN 1993-1-2</td></tr>
-      </tbody>
-    </table>
-
-    <h2>Proje Sahipleri ve Müteahhitler İçin Ne Anlama Geliyor?</h2>
+    <h2>Proje Sahipleri İçin Ne Anlama Geliyor?</h2>
     <p>
       <strong>Kısa cevap:</strong> 1 Ocak 2027'den itibaren belediyeye ruhsat başvurusunda
-      bu 11 kontrolü kapsayan, imzalı ve mühürlü statik hesap raporu olmadan izin çıkmayacak.
+      yönetmeliğe uygun, imzalı ve mühürlü mühendislik raporu olmadan izin çıkmayacak.
     </p>
     <p>
-      Bu, şu ana kadar "göz kararı" veya eski AISI tabloları ile yapılan projelerin
-      artık geçersiz olacağı anlamına geliyor. Doğru profil seçimi ve hesap,
-      hem yasal zorunluluk hem de yapının güvenliği açısından kritik.
+      Bu, şu ana kadar "göz kararı" veya standart dışı hesaplarla yapılan projelerin
+      artık kabul edilmeyeceği anlamına geliyor. Doğru profil seçimi ve kapsamlı
+      mühendislik hesabı hem yasal zorunluluk hem de yapı güvenliği açısından kritik.
     </p>
 
     <div class="post-callout">
-      <div class="post-callout-title">📌 Dikkat Edilmesi Gereken Nokta</div>
-      <p>Yönetmelik, eski projelere geriye dönük uygulanmıyor. Ancak
-      <strong>tadilat ve güçlendirme</strong> projelerinde yeni standart geçerli olacak.</p>
+      <div class="post-callout-title">📌 Dikkat</div>
+      <p>Yönetmelik, mevcut yapılara geriye dönük uygulanmıyor. Ancak
+      <strong>tadilat, ek kat veya güçlendirme</strong> projelerinde yeni standart geçerli olacak.</p>
     </div>
 
-    <h2>MefSteel Nasıl Uyum Sağlıyor?</h2>
+    <h2>MefSteel Uyum Durumu</h2>
     <p>
-      MefSteel olarak, 2026 yönetmeliği yürürlüğe girmeden önce kendi mühendislik
-      yazılımımız <strong>MefCAD Statik</strong>'i bu standartlara uyumlu hale getirdik.
-      Yazılımımız:
-    </p>
-    <ul>
-      <li>17 farklı profil kesitini (C90–C250) otomatik boyutlandırıyor</li>
-      <li>11 kontrol maddesinin tamamını hesaplıyor</li>
-      <li>TBDY 2018 deprem parametrelerini (Ss, S1, Sds, Sd1) otomatik alıyor</li>
-      <li>"2026 Yönetmeliği Uyumlu" damgalı PDF rapor üretiyor</li>
-    </ul>
-    <p>
-      Bu, müşterilerimizin ruhsat sürecinde herhangi bir ek yük olmadan
-      tam uyumlu rapor alabilmesi anlamına geliyor.
+      MefSteel olarak tüm projelerimizi 2026 Hafif Çelik Yönetmeliği ve TBDY 2018
+      gerekliliklerine uygun olarak yürütüyoruz. Müşterilerimize ruhsat sürecinde
+      kullanabilecekleri <strong>"2026 Yönetmeliği Uyumlu" damgalı mühendislik raporu</strong>
+      sunuyoruz. Hesap detayları proje bazında hazırlanmakta olup ruhsat dosyasına
+      dahil edilmektedir.
     </p>
 
     <div class="post-cta">
-      <h3>Projeniz için 2026 Uyumlu Statik Hesap</h3>
-      <p>MefSteel mühendisleri, projenizin tüm 11 kontrol maddesini hesaplayarak
-      ruhsata hazır PDF rapor hazırlıyor. Tekirdağ ve çevresi için ücretsiz ön değerlendirme.</p>
+      <h3>Projeniz için 2026 Uyumlu Mühendislik Raporu</h3>
+      <p>MefSteel mühendisleri projenizi yönetmeliğe tam uyumlu şekilde hazırlıyor.
+      Tekirdağ ve çevresi için ücretsiz ön değerlendirme.</p>
       <a href="/#iletisim">Hemen Teklif Alın →</a>
     </div>
 
@@ -249,9 +174,9 @@
 
     <h3>Yönetmelik hangi yapıları kapsıyor?</h3>
     <p>
-      Galvanizli çelik profil (0.5–3.5 mm et kalınlığı) kullanılarak inşa edilen
-      tüm hafif çelik iskelet sistemleri. Konut, ofis, eğitim, sağlık yapıları dahil.
-      Ağır çelik konstrüksiyon (HEA, IPE vb.) bu yönetmelik kapsamı dışında.
+      Galvanizli ince çelik profil kullanılarak inşa edilen tüm hafif çelik iskelet
+      sistemleri. Konut, ofis, eğitim ve sağlık yapıları dahil. Ağır çelik konstrüksiyon
+      (HEA, IPE vb.) bu yönetmelik kapsamı dışındadır.
     </p>
 
     <h3>Eski binalara etkisi var mı?</h3>
@@ -260,11 +185,17 @@
       ek kat veya güçlendirme</strong> projelerinde yeni yönetmelik geçerli olacak.
     </p>
 
+    <h3>Ruhsat alırken ne gerekiyor?</h3>
+    <p>
+      1 Ocak 2027 sonrasında yapı ruhsatı başvurusunda, 2026 Hafif Çelik Yönetmeliği'ne
+      uygun olduğu belgelenen mühendislik raporu sunulması zorunlu. MefSteel bu raporu
+      her proje için hazırlamaktadır.
+    </p>
+
     <h3>Yurt dışında üretilen profiller uyumlu mu?</h3>
     <p>
-      Yönetmelik Türkiye'deki uygulamayı düzenliyor; malzeme CE belgeli ve Z275 minimum
-      kaplama şartını sağlıyorsa yurt dışı profil kullanılabilir. Ancak hesapta yönetmelik
-      değerleri esas alınmalı.
+      CE belgeli ve yönetmelikte belirtilen minimum kaplama şartını sağlayan profiller
+      kullanılabilir. Hesaplar her durumda Türk yönetmeliği değerleri esas alınarak yapılmalıdır.
     </p>
 
   </div>
