@@ -66,14 +66,14 @@
 <p id="hata" class="error"></p>
 
 <script>
-const BASE = 'https://api.counterapi.dev/v1/mefsteel-eker';
+const BASE = 'https://api.countapi.xyz/get/mefsteel-eker';
 const KEYS = ['ziyaretci','whatsapp','teklif-al','iletisim-gec','form-gonder','projeler-gor'];
 
 async function fetchKey(key) {
   const res = await fetch(BASE + '/' + key, { cache: 'no-store' });
   if (!res.ok) throw new Error('HTTP ' + res.status);
   const json = await res.json();
-  return json.count ?? json.value ?? json.data?.count ?? 0;
+  return json.value ?? json.count ?? 0;
 }
 
 async function yukle() {

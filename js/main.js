@@ -622,8 +622,8 @@ if (form) {
 
 // ===== SAYAÇ TAKİP =====
 (function() {
-  const BASE = 'https://api.counterapi.dev/v1/mefsteel-eker';
-  function hit(key) { fetch(BASE + '/' + key + '/up').catch(() => {}); }
+  const BASE = 'https://api.countapi.xyz/hit/mefsteel-eker';
+  function hit(key) { fetch(BASE + '/' + key).catch(() => {}); }
 
   // Ziyaretçi sayacı (bot engellemek için sessionStorage ile tek sayım)
   if (!sessionStorage.getItem('sv')) {
