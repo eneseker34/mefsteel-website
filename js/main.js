@@ -620,35 +620,30 @@ if (form) {
   });
 }
 
-// ===== SAYAÇ TAKİP =====
+// ===== OLAY TAKİP (Google Analytics) =====
 (function() {
-  const BASE = 'https://api.countapi.xyz/hit/mefsteel-eker';
-  function hit(key) { fetch(BASE + '/' + key).catch(() => {}); }
-
-  // Ziyaretçi sayacı (bot engellemek için sessionStorage ile tek sayım)
-  if (!sessionStorage.getItem('sv')) {
-    sessionStorage.setItem('sv', '1');
-    hit('ziyaretci');
+  function gaEvent(name) {
+    if (typeof gtag === 'function') gtag('event', name);
   }
 
   // Hero "Teklif Al"
-  document.querySelector('a.btn-secondary')?.addEventListener('click', () => hit('teklif-al'));
+  document.querySelector('a.btn-secondary')?.addEventListener('click', () => gaEvent('teklif_al_tikla'));
 
   // Projelerimizi Gör
-  document.querySelector('a.btn-primary')?.addEventListener('click', () => hit('projeler-gor'));
+  document.querySelector('a.btn-primary')?.addEventListener('click', () => gaEvent('projeler_gor_tikla'));
 
   // Paket "İletişime Geç" butonları
   document.querySelectorAll('.pricing-btn').forEach(el =>
-    el.addEventListener('click', () => hit('iletisim-gec'))
+    el.addEventListener('click', () => gaEvent('iletisime_gec_tikla'))
   );
 
   // WhatsApp linkleri
   document.querySelectorAll('a[href*="wa.me"]').forEach(el =>
-    el.addEventListener('click', () => hit('whatsapp'))
+    el.addEventListener('click', () => gaEvent('whatsapp_tikla'))
   );
 
   // İletişim formu gönder
-  document.getElementById('contact-form')?.addEventListener('submit', () => hit('form-gonder'));
+  document.getElementById('contact-form')?.addEventListener('submit', () => gaEvent('form_gonder'));
 })();
 
 // ===== SMOOTH SCROLL =====

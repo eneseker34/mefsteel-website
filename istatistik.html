@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MefSteel — İstatistikler</title>
 <meta name="robots" content="noindex, nofollow">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-649QME50WX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-649QME50WX');
+</script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { background: #0D1117; color: #E8EDF2; font-family: 'Inter', sans-serif; min-height: 100vh; padding: 40px 20px; }
@@ -15,11 +23,11 @@
   .card-label { font-size: 0.75rem; color: #8B9BAA; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
   .card-value { font-size: 2.4rem; font-weight: 700; color: #F4A261; line-height: 1; }
   .card-icon { font-size: 1.4rem; margin-bottom: 12px; }
-  .refresh-btn { margin-top: 32px; background: #F4A261; color: #0D1117; border: none; padding: 10px 24px; border-radius: 8px; font-size: 0.9rem; font-weight: 600; cursor: pointer; }
-  .refresh-btn:hover { background: #e8914f; }
-  .updated { margin-top: 12px; font-size: 0.8rem; color: #8B9BAA; }
-  .error { color: #E74C3C; font-size: 0.8rem; margin-top: 8px; }
-  .loading { opacity: 0.4; }
+  .ga-btn { display: inline-flex; align-items: center; gap: 10px; margin-top: 32px; background: #4285F4; color: #fff; border: none; padding: 12px 28px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; text-decoration: none; }
+  .ga-btn:hover { background: #3367D6; }
+  .info { margin-top: 16px; font-size: 0.82rem; color: #8B9BAA; max-width: 500px; line-height: 1.6; }
+  .realtime { margin-top: 32px; background: #161B22; border: 1px solid #21262D; border-radius: 12px; padding: 20px 24px; max-width: 900px; }
+  .realtime h2 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; color: #E8EDF2; }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,91 +35,44 @@
 <body>
 
 <h1>📊 MefSteel İstatistikler</h1>
-<p class="subtitle" id="updated-time">Yükleniyor...</p>
+<p class="subtitle">Google Analytics ile takip ediliyor — G-649QME50WX</p>
 
 <div class="grid">
   <div class="card">
     <div class="card-icon">👁️</div>
-    <div class="card-label">Toplam Ziyaret</div>
-    <div class="card-value loading" id="ziyaretci">—</div>
+    <div class="card-label">Bugünkü Ziyaret</div>
+    <div class="card-value" id="realtime-val">—</div>
   </div>
   <div class="card">
     <div class="card-icon">💬</div>
     <div class="card-label">WhatsApp Tıklaması</div>
-    <div class="card-value loading" id="whatsapp">—</div>
+    <div class="card-value">GA'da</div>
   </div>
   <div class="card">
     <div class="card-icon">📋</div>
     <div class="card-label">Teklif Al Tıklaması</div>
-    <div class="card-value loading" id="teklif-al">—</div>
-  </div>
-  <div class="card">
-    <div class="card-icon">📩</div>
-    <div class="card-label">İletişime Geç</div>
-    <div class="card-value loading" id="iletisim-gec">—</div>
+    <div class="card-value">GA'da</div>
   </div>
   <div class="card">
     <div class="card-icon">✅</div>
     <div class="card-label">Form Gönderildi</div>
-    <div class="card-value loading" id="form-gonder">—</div>
-  </div>
-  <div class="card">
-    <div class="card-icon">🏗️</div>
-    <div class="card-label">Projeler Tıklaması</div>
-    <div class="card-value loading" id="projeler-gor">—</div>
+    <div class="card-value">GA'da</div>
   </div>
 </div>
 
-<button class="refresh-btn" onclick="yukle()">↻ Yenile</button>
-<p id="hata" class="error"></p>
+<a class="ga-btn" href="https://analytics.google.com/analytics/web/#/p10314589274/reports/intelligenthome" target="_blank">
+  📈 Google Analytics'i Aç
+</a>
 
-<script>
-const BASE = 'https://api.countapi.xyz/get/mefsteel-eker';
-const KEYS = ['ziyaretci','whatsapp','teklif-al','iletisim-gec','form-gonder','projeler-gor'];
+<p class="info">
+  Tüm ziyaretçi, tıklama ve form verileri Google Analytics'te saklanıyor.<br>
+  Raporlar → Etkinlikler bölümünde whatsapp_tikla, teklif_al_tikla gibi özel olayları görebilirsin.
+</p>
 
-async function fetchKey(key) {
-  const res = await fetch(BASE + '/' + key, { cache: 'no-store' });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
-  const json = await res.json();
-  return json.value ?? json.count ?? 0;
-}
+<div class="realtime">
+  <h2>⚡ Şu An Sitende Kaç Kişi Var?</h2>
+  <p style="color:#8B9BAA;font-size:0.88rem">Google Analytics → Raporlar → Gerçek Zamanlı bölümünden takip edebilirsin.</p>
+</div>
 
-async function yukle() {
-  document.getElementById('updated-time').textContent = 'Yükleniyor...';
-  document.getElementById('hata').textContent = '';
-  KEYS.forEach(k => {
-    const el = document.getElementById(k);
-    if (el) { el.textContent = '—'; el.classList.add('loading'); }
-  });
-
-  let hataSayisi = 0;
-  const results = await Promise.all(
-    KEYS.map(k =>
-      fetchKey(k).catch(e => { hataSayisi++; return 0; })
-    )
-  );
-
-  KEYS.forEach((k, i) => {
-    const el = document.getElementById(k);
-    if (el) {
-      el.textContent = Number(results[i]).toLocaleString('tr-TR');
-      el.classList.remove('loading');
-    }
-  });
-
-  const now = new Date().toLocaleString('tr-TR');
-  if (hataSayisi === KEYS.length) {
-    document.getElementById('hata').textContent = '⚠️ counterapi.dev\'e ulaşılamıyor. VPN açıksa kapat ve tekrar dene.';
-    document.getElementById('updated-time').textContent = '';
-  } else if (hataSayisi > 0) {
-    document.getElementById('hata').textContent = hataSayisi + ' sayaç okunamadı.';
-    document.getElementById('updated-time').textContent = 'Son güncelleme: ' + now;
-  } else {
-    document.getElementById('updated-time').textContent = 'Son güncelleme: ' + now;
-  }
-}
-
-yukle();
-</script>
 </body>
 </html>
