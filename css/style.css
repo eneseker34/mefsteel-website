@@ -2056,11 +2056,16 @@ footer {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     font-size: 0.82rem;
+    width: 100%;
+    max-width: calc(100vw - 40px);
   }
   .post-table th,
   .post-table td {
     padding: 9px 12px;
     white-space: nowrap;
+  }
+  .post-body {
+    overflow-x: hidden;
   }
   .post-callout {
     padding: 16px 18px;
