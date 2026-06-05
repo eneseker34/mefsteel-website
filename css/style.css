@@ -1462,6 +1462,14 @@ footer {
 
 .footer-brand .logo { margin-bottom: 16px; }
 
+.footer-logo {
+  height: 52px;
+  width: auto;
+  filter: invert(1);
+  margin-bottom: 12px;
+  display: block;
+}
+
 .footer-desc {
   font-size: 0.85rem;
   color: var(--gray);
