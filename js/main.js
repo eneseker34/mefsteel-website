@@ -498,7 +498,7 @@ function renderGalleryItems(projects) {
     const isim = p.isim || ('Proje ' + (i + 1));
     const desc = p.aciklama || 'Hafif çelik yapı projesi';
     const big  = i === 0 ? ' big' : '';
-    return `<div class="gallery-item${big}" data-cat="${kat}" data-img="${img}" data-title="${isim}" data-desc="${desc}">
+    return `<div class="gallery-item${big}" data-cat="${kat}" data-img="${img}" data-title="${isim}" data-desc="${desc}" style="animation-delay:${(i % 12) * 0.06}s">
       <img src="${img}" alt="${isim}" loading="lazy" onerror="this.parentNode.style.background='#1E3A5F'">
       <div class="gi-overlay">
         <div class="gi-tag">${tag}</div>
@@ -535,7 +535,7 @@ function galeriTumunu() {
     const img = p.dosya.startsWith('http') ? p.dosya : 'images/projeler/' + p.dosya;
     const kat = p.kategori || 'konut';
     const big = i === 0 ? ' big' : '';
-    return `<div class="gallery-item${big}" data-cat="${kat}" data-img="${img}">
+    return `<div class="gallery-item${big}" data-cat="${kat}" data-img="${img}" style="animation-delay:${(i % 12) * 0.06}s">
       <img src="${img}" alt="${p.isim}" loading="lazy" onerror="this.parentNode.style.background='#1E3A5F'">
       <div class="gi-overlay"><div class="gi-tag">${KAT[kat]||'Proje'}</div><div class="gi-title">${p.isim}</div></div>
     </div>`;
