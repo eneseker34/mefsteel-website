@@ -156,6 +156,20 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => observer.observe(el));
 
+// Galeri kartları ekrana girince animasyonu tetikle (sayfa yüklenirken değil)
+const galleryGridEl = document.getElementById('gallery-grid');
+if (galleryGridEl) {
+  const galleryObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        galleryGridEl.classList.add('in-view');
+        galleryObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.1 });
+  galleryObserver.observe(galleryGridEl);
+}
+
 // ===== COUNTER ANIMATION =====
 function animateCounter(el) {
   const target = parseInt(el.dataset.target);
