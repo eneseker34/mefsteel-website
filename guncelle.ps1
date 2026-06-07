@@ -91,6 +91,10 @@ KATEGORILER = ['konut','ticari','endustriyel']
 
 manifest = []
 goruldu = set()
+# NOT: .webp manifest taramasina dahil EDILMIYOR -- her foto icin otomatik
+# uretilen .webp kopyasi ayni gorseli ikinci kez listeleyip galeride "iki ayni
+# foto" gosterirdi. .webp sadece performans icin diskte tutulur, galeri girisi
+# olarak orijinal (.jpg/.png) kullanilir.
 
 # Excel foylerinden proje bilgilerini oku
 try:
@@ -115,7 +119,7 @@ try:
             # Bu klasordeki fotograflari bul
             klasor_yolu = os.path.join(FOTOLAR, kat, klasor)
             if os.path.isdir(klasor_yolu):
-                dosyalar = sorted([f for f in os.listdir(klasor_yolu) if f.lower().endswith(('.jpg','.jpeg','.png','.webp'))])
+                dosyalar = sorted([f for f in os.listdir(klasor_yolu) if f.lower().endswith(('.jpg','.jpeg','.png'))])
                 for d in dosyalar:
                     hedef_dosya = kat + '/' + d
                     if hedef_dosya not in goruldu:
@@ -130,7 +134,7 @@ for kat in KATEGORILER:
     kat_dir = os.path.join(WEBSITE, kat)
     if not os.path.isdir(kat_dir): continue
     for f in sorted(os.listdir(kat_dir)):
-        if not f.lower().endswith(('.jpg','.jpeg','.png','.webp')): continue
+        if not f.lower().endswith(('.jpg','.jpeg','.png')): continue
         dosya_yolu = kat + '/' + f
         if dosya_yolu not in goruldu:
             goruldu.add(dosya_yolu)
@@ -139,7 +143,7 @@ for kat in KATEGORILER:
 
 # Kok klasordeki fotograflar
 for f in sorted(os.listdir(WEBSITE)):
-    if not f.lower().endswith(('.jpg','.jpeg','.png','.webp')): continue
+    if not f.lower().endswith(('.jpg','.jpeg','.png')): continue
     if f not in goruldu:
         goruldu.add(f)
         manifest.append({'dosya': f, 'isim': 'MefSteel Proje',
