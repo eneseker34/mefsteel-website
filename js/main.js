@@ -339,7 +339,7 @@ const CS = {
 };
 
 // manifest.json yükle → CardStack'e ver
-fetch('images/projeler/manifest.json?v=' + Date.now())
+fetch('images/projeler/manifest.json?v=2026061201')
   .then(r => r.ok ? r.json() : [])
   .then(data => CS.build(data))
   .catch(() => {});
@@ -445,7 +445,7 @@ if (g4Next) g4Next.addEventListener('click', () => { if (g4Index < g4Total - 1) 
 })();
 
 // manifest.json yükle
-fetch('images/projeler/manifest.json?v=' + Date.now())
+fetch('images/projeler/manifest.json?v=2026061201')
   .then(r => r.ok ? r.json() : [])
   .then(data => g4Render(data))
   .catch(() => g4Render([]));
@@ -585,7 +585,7 @@ function buildGallery(projects) {
   });
 }
 
-fetch('images/projeler/manifest.json?v=' + Date.now())
+fetch('images/projeler/manifest.json?v=2026061201')
   .then(r => r.ok ? r.json() : [])
   .then(data => buildGallery(data))
   .catch(() => {});
