@@ -660,6 +660,16 @@ if (form) {
   document.getElementById('contact-form')?.addEventListener('submit', () => gaEvent('form_gonder'));
 })();
 
+// ===== SERVICE CARD ACCORDION =====
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('click', e => {
+    if (e.target.closest('a')) return; // CTA linkine tıklandıysa accordion açma
+    const isOpen = card.classList.contains('open');
+    document.querySelectorAll('.service-card').forEach(c => c.classList.remove('open'));
+    if (!isOpen) card.classList.add('open');
+  });
+});
+
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {

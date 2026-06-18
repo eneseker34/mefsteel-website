@@ -446,10 +446,58 @@ section { padding: 100px 5%; }
   border-radius: var(--radius);
   padding: 36px 28px;
   position: relative;
-  overflow: hidden;
   transition: var(--transition);
-  cursor: default;
+  cursor: pointer;
 }
+
+/* Accordion detail panel */
+.service-detail {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+.service-card.open .service-detail {
+  max-height: 500px;
+  opacity: 1;
+}
+.service-detail ul {
+  margin: 16px 0 8px;
+  padding: 16px 0 0;
+  border-top: 1px solid var(--glass-border);
+  list-style: none;
+}
+.service-detail li {
+  font-size: 0.85rem;
+  color: var(--gray);
+  padding: 5px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.5;
+}
+.service-detail li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.service-detail .svc-detail-cta {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(244,162,97,0.3);
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+.service-detail .svc-detail-cta:hover { background: rgba(244,162,97,0.1); }
+.service-card.open { border-color: rgba(244,162,97,0.35); }
+.service-arrow svg { transition: transform 0.3s ease; }
+.service-card.open .service-arrow svg { transform: rotate(90deg); }
 
 .service-card::before {
   content: '';
