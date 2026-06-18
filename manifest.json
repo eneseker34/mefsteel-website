@@ -1,0 +1,3481 @@
+[
+  {
+    "dosya": "konut/akkus-villa-01.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-02.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-03.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-04.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-05.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-06.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-07.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-08.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-09.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-10.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-11.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-12.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-13.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-14.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-15.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-16.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-17.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-18.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/akkus-villa-19.jpg",
+    "isim": "Akku? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-01.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-02.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-03.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-04.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-05.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-06.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-07.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-08.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-09.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-10.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-11.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-12.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-13.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-14.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-15.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-16.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-17.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-18.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-19.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-20.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-21.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-22.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-23.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-24.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-25.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-26.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-27.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-28.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/benek-villa-29.jpg",
+    "isim": "Benek Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-01.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-02.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-03.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-04.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-05.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-06.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-07.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-08.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-09.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-10.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-11.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-12.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-13.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-14.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-15.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-16.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-17.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-18.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-19.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-20.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-21.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-22.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-23.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-24.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-25.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-26.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-27.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-28.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-29.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-30.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/can-villa-31.jpg",
+    "isim": "Can Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-01.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-02.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-03.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-04.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-05.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-06.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-07.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-08.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-09.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-10.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-11.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-12.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-13.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-14.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-15.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-16.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/cemal-villa-17.jpg",
+    "isim": "Cemal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-01.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-02.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-03.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-04.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-05.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-06.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-07.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-08.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-09.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-10.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-11.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-12.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-13.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-14.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-15.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-16.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-17.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-18.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-19.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-20.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-21.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-22.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-23.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-24.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-25.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-26.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-27.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-28.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-29.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-30.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-31.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-32.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-33.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-34.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-35.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-36.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-37.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-38.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-39.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-40.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-41.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-42.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-43.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-44.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-45.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-46.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-47.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-48.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/durmazlar-villa-49.jpg",
+    "isim": "Durmazlar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, b?y?k ?l?ekli konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-01.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-02.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-03.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-04.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-05.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-06.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-07.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-08.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-09.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-10.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-11.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/dindar-villa-12.jpg",
+    "isim": "Dindar Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-01.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-02.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-03.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-04.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-05.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-06.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-07.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-08.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-09.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-10.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-11.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-12.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-13.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-14.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-15.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-16.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-17.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-18.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-19.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-20.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-21.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-22.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-23.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-24.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gulser-villa-25.jpg",
+    "isim": "G?lser Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-01.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-02.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-03.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-04.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-05.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-06.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-07.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-08.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-09.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-10.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-11.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-12.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-13.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-14.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-15.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-16.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-17.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/gunes-villa-18.jpg",
+    "isim": "G?ne? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-01.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-02.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-03.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-04.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-05.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-06.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-07.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-08.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-09.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-10.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-11.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-12.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-13.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-14.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-15.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-16.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kartal-villa-17.jpg",
+    "isim": "Kartal Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-01.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-02.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-03.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-04.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-05.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-06.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-07.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-08.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-09.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-10.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-11.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-12.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-13.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-14.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-15.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-16.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-17.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-18.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-19.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-20.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-21.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-22.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-23.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-24.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-25.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-26.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kayin-villa-27.jpg",
+    "isim": "Kay?n Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-01.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-02.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-03.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-04.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-05.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-06.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-07.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-08.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-09.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-10.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-11.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-12.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-13.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-14.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/kinik-villa-15.jpg",
+    "isim": "K?n?k Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-01.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-02.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-03.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-04.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-05.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-06.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-07.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-08.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-09.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-10.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-11.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-12.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-13.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/ma-tiny-house-14.jpg",
+    "isim": "M.A. Tiny House",
+    "kategori": "konut",
+    "aciklama": "Tiny house ve sundurma projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-01.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-02.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-03.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-04.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-05.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-06.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-07.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-08.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-09.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-10.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-11.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-12.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-13.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-14.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-15.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-16.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-17.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-18.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-19.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-20.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-21.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-22.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-23.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-24.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-25.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-26.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-27.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-28.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-29.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-30.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-31.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-32.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-33.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-34.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-35.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-36.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-37.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-38.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-39.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-40.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-41.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-42.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-43.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-44.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-45.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-46.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/mecidiye-villa-47.jpg",
+    "isim": "Mecidiye Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, tek katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-01.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-02.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-03.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-04.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-05.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-06.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-07.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-08.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-09.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/muldur-villa-10.jpg",
+    "isim": "M?ld?r Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-01.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-02.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-03.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-04.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-05.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-06.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-07.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-08.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-09.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-10.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-11.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-12.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-13.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-14.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-15.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-16.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-17.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-18.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-19.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-20.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-21.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-22.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-23.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-24.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-25.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-26.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-27.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-28.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/pamuk-villa-29.jpg",
+    "isim": "Pamuk Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sarili-villa-01.jpg",
+    "isim": "Sar?l? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sarili-villa-02.jpg",
+    "isim": "Sar?l? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sarili-villa-03.jpg",
+    "isim": "Sar?l? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sarili-villa-04.jpg",
+    "isim": "Sar?l? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sarili-villa-05.jpg",
+    "isim": "Sar?l? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sarili-villa-06.jpg",
+    "isim": "Sar?l? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sarili-villa-07.jpg",
+    "isim": "Sar?l? Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-01.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-02.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-03.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-04.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-05.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-06.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-07.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-08.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-09.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-10.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-11.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-12.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-13.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-14.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-15.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-16.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-17.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-18.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-19.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-20.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-21.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-22.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-23.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-24.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-25.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-26.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-27.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-28.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-29.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-30.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-31.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-32.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-33.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-34.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-35.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-36.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-37.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-38.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/sayit-villa-39.jpg",
+    "isim": "Sayit Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda?, iki katl? konut",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-01.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-02.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-03.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-04.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-05.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-06.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-07.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-08.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-09.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-10.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-11.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-12.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-13.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-14.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-15.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-16.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-17.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-18.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-19.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-20.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-21.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-22.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-23.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-24.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-25.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-26.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-27.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-28.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "konut/zaireci-villa-29.jpg",
+    "isim": "Zaireci Villa",
+    "kategori": "konut",
+    "aciklama": "Tekirda? konut projesi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "ticari/sefa-showroom-01.jpg",
+    "isim": "Sefa Villa Showroom",
+    "kategori": "ticari",
+    "aciklama": "Showroom binas?, ticari yap?",
+    "yil": "2025"
+  },
+  {
+    "dosya": "ticari/sefa-showroom-02.jpg",
+    "isim": "Sefa Villa Showroom",
+    "kategori": "ticari",
+    "aciklama": "Showroom binas?, ticari yap?",
+    "yil": "2025"
+  },
+  {
+    "dosya": "ticari/sefa-showroom-03.jpg",
+    "isim": "Sefa Villa Showroom",
+    "kategori": "ticari",
+    "aciklama": "Showroom binas?, ticari yap?",
+    "yil": "2025"
+  },
+  {
+    "dosya": "ticari/sefa-showroom-04.jpg",
+    "isim": "Sefa Villa Showroom",
+    "kategori": "ticari",
+    "aciklama": "Showroom binas?, ticari yap?",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-01.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-02.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-03.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-04.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-05.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-06.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-07.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-08.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-09.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-10.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-11.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-12.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-13.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-14.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-15.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-16.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-17.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-18.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-19.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-20.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-21.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-22.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-23.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-24.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-25.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-26.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-27.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-28.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-29.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-30.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-31.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-32.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-33.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-34.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-35.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-36.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-37.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "endustriyel/putzmeister-ofis-38.jpg",
+    "isim": "Putzmeister Ofis",
+    "kategori": "endustriyel",
+    "aciklama": "Fabrika i?i ofis ve b?lme duvar sistemi",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-01.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-02.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-03.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-04.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-05.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-06.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-07.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-08.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-09.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-10.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-11.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-12.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-13.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-14.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-15.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-16.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-17.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-18.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-19.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-20.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  },
+  {
+    "dosya": "hibrit/hibrit-yapi-21.jpg",
+    "isim": "G?lcan Villa ? Hibrit Yap?",
+    "kategori": "konut",
+    "aciklama": "Betonarme iskelet + hafif ?elik duvar",
+    "yil": "2025"
+  }
+]
