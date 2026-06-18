@@ -5,6 +5,7 @@ const LANGS = {
   de: { flag: '🇩🇪', label: 'Deutsch' },
   fr: { flag: '🇫🇷', label: 'Français' },
   it: { flag: '🇮🇹', label: 'Italiano' },
+  es: { flag: '🇪🇸', label: 'Español' },
   bg: { flag: '🇧🇬', label: 'Български' },
   el: { flag: '🇬🇷', label: 'Ελληνικά' }
 };
