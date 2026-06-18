@@ -62,7 +62,7 @@ body {
 }
 
 .logo-img {
-  height: 56px;
+  height: 72px;
   width: auto;
   filter: invert(1);
   transition: var(--transition);
@@ -70,10 +70,10 @@ body {
 
 .logo-img:hover { opacity: 0.85; }
 
-#navbar.scrolled .logo-img { height: 48px; }
+#navbar.scrolled .logo-img { height: 60px; }
 
 .footer-brand .logo-img {
-  height: 52px;
+  height: 64px;
   margin-bottom: 12px;
 }
 
