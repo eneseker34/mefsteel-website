@@ -6,6 +6,10 @@
   <meta name="description" content="MefSteel Blog — Hafif çelik yapı sistemleri, 2026 yönetmeliği, statik hesap ve sektör haberleri hakkında uzman içerikler.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://mefsteel.com/blog/">
+  <link rel="alternate" hreflang="tr" href="https://mefsteel.com/blog/">
+  <link rel="alternate" hreflang="en" href="https://mefsteel.com/blog/en/">
+  <link rel="alternate" hreflang="de" href="https://mefsteel.com/blog/de/">
+  <link rel="alternate" hreflang="x-default" href="https://mefsteel.com/blog/">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <title>Blog | MefSteel — Hafif Çelik Yapı Sistemleri</title>
     <!-- Google Analytics -->
@@ -21,6 +25,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
   <link rel="stylesheet" href="/css/style.css">
+  <script>
+    window.BLOG_LANG_MAP = {
+      tr: '/blog/',
+      en: '/blog/en/',
+      de: '/blog/de/'
+    };
+    window.BLOG_CURRENT_LANG = 'tr';
+  </script>
+  <script src="/js/blog-lang-switcher.js" defer></script>
 </head>
 <body>
 
@@ -36,6 +49,7 @@
     <a href="/#hakkimizda">Hakkımızda</a>
     <a href="/#iletisim" class="nav-cta">İletişim</a>
   </nav>
+  <div id="lang-switcher" class="lang-switcher"></div>
   <div class="hamburger" aria-label="Menü"><span></span><span></span><span></span></div>
 </header>
 
