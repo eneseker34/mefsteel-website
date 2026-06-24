@@ -115,6 +115,7 @@
   <nav>
     <a href="#hizmetler" data-i18n="nav_services">Hizmetler</a>
     <a href="#paketler" data-i18n="nav_packages">Paketler</a>
+    <a href="#hesaplama">Maliyet Hesapla</a>
     <a href="#projeler" data-i18n="nav_projects">Projeler</a>
     <a href="/blog/" data-i18n="nav_blog">Blog</a>
     <a href="#hakkimizda" data-i18n="nav_about">Hakkımızda</a>
@@ -379,6 +380,84 @@
     </div>
   </div>
 </section>
+
+<!-- ===== MALİYET HESAPLAMA ===== -->
+<section id="hesaplama" class="calc-section">
+  <style>
+  .calc-section{padding:90px 24px;background:linear-gradient(180deg,var(--navy) 0%,var(--navy2) 100%)}
+  .calc-inner{max-width:760px;margin:0 auto}
+  .calc-card{background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+  .calc-field{margin-bottom:20px}
+  .calc-field label{display:block;font-weight:600;color:var(--light);margin-bottom:8px;font-size:.95rem}
+  .calc-field input,.calc-field select{width:100%;padding:14px 16px;border-radius:10px;border:1px solid var(--glass-border);background:rgba(255,255,255,.06);color:var(--white);font-size:1rem;font-family:inherit;box-sizing:border-box}
+  .calc-field input:focus,.calc-field select:focus{outline:none;border-color:var(--accent)}
+  .calc-field select option{background:var(--navy2);color:var(--white)}
+  .calc-result{margin:24px 0;padding:24px;border-radius:12px;background:linear-gradient(135deg,rgba(244,162,97,.12),rgba(231,111,81,.12));border:1px solid rgba(244,162,97,.3);text-align:center}
+  .calc-result-label{font-size:.9rem;color:var(--gray);margin-bottom:6px}
+  .calc-result-value{font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1.25}
+  .calc-result-note{font-size:.78rem;color:var(--gray);margin-top:10px;line-height:1.5}
+  .calc-btn{display:block;text-align:center;margin-top:8px;padding:16px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--white);font-weight:700;text-decoration:none;font-size:1.02rem;transition:var(--transition);box-shadow:0 6px 20px rgba(231,111,81,.35)}
+  .calc-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(231,111,81,.5)}
+  @media(max-width:640px){.calc-card{padding:22px}.calc-result-value{font-size:1.55rem}}
+  </style>
+  <div class="calc-inner">
+    <div class="section-label fade-up" style="justify-content:center">Maliyet Tahmini</div>
+    <h2 class="section-title fade-up delay-1" style="text-align:center">Hafif Çelik Ev Maliyet Hesaplama</h2>
+    <p class="section-desc fade-up delay-2" style="text-align:center;max-width:620px;margin:0 auto 32px">Alanınızı ve paketi seçin, yaklaşık maliyet aralığını anında görün. Kesin fiyat için tek tıkla ücretsiz teklif alın.</p>
+    <div class="calc-card fade-up delay-2">
+      <div class="calc-field">
+        <label for="calcArea">Toplam İnşaat Alanı (m²)</label>
+        <input type="number" id="calcArea" min="10" max="2000" value="120" inputmode="numeric">
+      </div>
+      <div class="calc-field">
+        <label for="calcFloors">Kat Sayısı</label>
+        <select id="calcFloors">
+          <option value="1">Tek Katlı</option>
+          <option value="2">İki Katlı</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label for="calcPkg">Paket</label>
+        <select id="calcPkg">
+          <option value="kaba">Kaba İnşaat (Temel + Çelik + Kurulum)</option>
+          <option value="ileri" selected>İleri Kaba (Çatı + Kaplama + Kaba Tesisat)</option>
+          <option value="anahtar">Anahtar Teslim (Oturmaya Hazır)</option>
+        </select>
+      </div>
+      <div class="calc-result" aria-live="polite">
+        <div class="calc-result-label">Tahmini Maliyet Aralığı</div>
+        <div class="calc-result-value" id="calcValue">—</div>
+        <div class="calc-result-note">* 2026 ortalama piyasa fiyatlarına göre tahmini aralıktır; lokasyon, zemin durumu, mimari ve malzeme seçimine göre değişir. Bağlayıcı değildir.</div>
+      </div>
+      <a href="https://wa.me/+905535430212" id="calcWhats" class="calc-btn" target="_blank" rel="noopener noreferrer">WhatsApp'tan Ücretsiz Kesin Teklif Al</a>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var RATES={kaba:[8000,12000],ileri:[12000,18000],anahtar:[22000,29000]};
+  var PKG={kaba:"Kaba İnşaat",ileri:"İleri Kaba",anahtar:"Anahtar Teslim"};
+  var area=document.getElementById('calcArea'),floors=document.getElementById('calcFloors'),
+      pkg=document.getElementById('calcPkg'),val=document.getElementById('calcValue'),
+      wa=document.getElementById('calcWhats');
+  if(!area||!wa) return;
+  function fmt(n){return '₺'+Math.round(n).toLocaleString('tr-TR');}
+  function hesapla(){
+    var a=parseFloat(area.value)||0;
+    if(a<=0){val.textContent='—';return;}
+    var r=RATES[pkg.value]||RATES.ileri,k=parseInt(floors.value,10)||1;
+    var lo=a*r[0],hi=a*r[1];
+    val.textContent=fmt(lo)+' – '+fmt(hi);
+    var msg='Merhaba, web sitenizdeki maliyet hesaplama aracını kullandım. '+a+' m² '
+      +(k===2?'iki katlı ':'tek katlı ')+PKG[pkg.value]+' için tahmini maliyet: '
+      +fmt(lo)+' – '+fmt(hi)+'. Kesin teklif almak istiyorum.';
+    wa.href='https://wa.me/+905535430212?text='+encodeURIComponent(msg);
+  }
+  [area,floors,pkg].forEach(function(el){el.addEventListener('input',hesapla);el.addEventListener('change',hesapla);});
+  wa.addEventListener('click',function(){if(window.gtag){gtag('event','teklif_al_tikla',{method:'maliyet_hesaplama'});}});
+  hesapla();
+})();
+</script>
 
 <!-- ===== GALERİ ===== -->
 <section id="projeler" class="gallery-section">
@@ -721,6 +800,21 @@
   <img id="lb-img" class="lightbox-img" src="" alt="MefSteel Hafif Çelik Yapı Projesi — Tekirdağ Trakya">
   <button id="lb-next" class="lightbox-nav">›</button>
 </div>
+
+<!-- ===== STICKY WHATSAPP ===== -->
+<a href="https://wa.me/+905535430212?text=Merhaba,%20hafif%20%C3%A7elik%20yap%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
+   id="stickyWhats" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile iletişime geç" title="WhatsApp ile yazın">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.449L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.516 5.26l-.999 3.648 3.972-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+<style>
+#stickyWhats{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.35);z-index:9990;transition:transform .25s ease,box-shadow .25s ease;animation:waPulse 2.4s infinite}
+#stickyWhats:hover{transform:scale(1.08);box-shadow:0 10px 26px rgba(37,211,102,.5)}
+@keyframes waPulse{0%{box-shadow:0 6px 18px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 6px 18px rgba(0,0,0,.35),0 0 0 14px rgba(37,211,102,0)}100%{box-shadow:0 6px 18px rgba(0,0,0,.35),0 0 0 0 rgba(37,211,102,0)}}
+@media(max-width:640px){#stickyWhats{width:52px;height:52px;right:14px;bottom:14px}}
+</style>
+<script>
+(function(){var b=document.getElementById('stickyWhats');if(b)b.addEventListener('click',function(){if(window.gtag){gtag('event','whatsapp_tikla',{method:'sticky_buton'});}});})();
+</script>
 
 <script src="js/main.js"></script>
 </body>
