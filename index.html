@@ -129,71 +129,32 @@
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section id="hero">
-  <canvas id="shader-canvas"></canvas>
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
+<!-- ===== HERO (scroll-expand + montaj + kolaj) ===== -->
+<div class="expand-wrap" id="heroWrap">
+  <div class="expand-sticky">
 
-  <div class="hero-image">
-    <picture>
-      <source srcset="/images/hero-villa.webp" type="image/webp">
-      <img src="/images/hero-villa.jpg" alt="MefSteel hafif çelik modern villa - gün batımında manzaralı yapı" onerror="this.style.display='none'">
-    </picture>
-  </div>
+    <div class="collage" id="heroCollage"></div>
 
-  <div class="hero-content">
-    <div class="hero-badge" data-i18n="hero_badge">Türkiye'nin Güvenilir Çelik Partneri</div>
-
-    <h1 class="hero-title">
-      <span data-i18n="hero_title_1">Hafif Çelik ile</span><br>
-      <span data-i18n="hero_title_2">Güçlü Yapılar</span><br>
-      <span data-i18n="hero_title_3">İnşa Ediyoruz</span>
-    </h1>
-
-    <p class="hero-desc" data-i18n="hero_desc">
-      Tasarımdan montaja kadar tüm süreçlerde yanınızdayız.
-      Hafif çelik yapı sistemlerinde uzman ekibimizle projelerinizi
-      hayata geçiriyoruz.
-    </p>
-
-    <div class="hero-trust-badges">
-      <span class="trust-badge">⚡ <span data-i18n="trust_delivery">45 Günde Teslim</span></span>
-      <span class="trust-badge">🏛️ <span data-i18n="trust_tbdy">TBDY 2026 Uyumlu</span></span>
-      <span class="trust-badge">📍 <span data-i18n="trust_region">Trakya & İstanbul</span></span>
+    <div class="stage" id="heroStage">
+      <div class="slide on" style="background-image:url('/images/hero-villa.webp')"></div>
+      <div class="slide" style="background-image:url('/images/about-work-2.webp')"></div>
+      <div class="slide" style="background-image:url('/images/projeler/konut/benek-villa-01.webp')"></div>
+      <div class="slide" style="background-image:url('/images/projeler/hibrit/hibrit-yapi-08.webp')"></div>
+      <div class="slide" style="background-image:url('/images/projeler/ticari/putzmeister-ofis-01.webp')"></div>
     </div>
 
-    <div class="hero-buttons">
-      <a href="#projeler" class="btn-primary">
-        <span data-i18n="hero_btn_primary">Projelerimizi Gör</span>
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="#iletisim" class="btn-secondary" data-i18n="hero_btn_secondary">
-        Teklif Al
-      </a>
+    <div class="expand-title">
+      <span id="heroT1">HAFİF ÇELİK</span>
+      <span id="heroT2">GÜÇLÜ YAPILAR</span>
     </div>
-
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num"><span data-target="50" data-suffix="+">0+</span></div>
-        <div class="stat-label" data-i18n="stat_projects">Tamamlanan Proje</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num"><span data-target="8" data-suffix="+">0+</span></div>
-        <div class="stat-label" data-i18n="stat_experience">Yıllık Deneyim</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num"><span data-target="20" data-suffix="K+">0K+</span></div>
-        <div class="stat-label" data-i18n="stat_area">m² Yapı Alanı</div>
-      </div>
+    <div class="expand-sub" id="heroSub">İki inşaat mühendisinin bilimle ürettiği güçlü, depreme dayanıklı yapılar</div>
+    <div class="expand-cta" id="heroCta">
+      <a href="#projeler" class="btn-primary">Projelerimizi Gör</a>
+      <a href="#iletisim" class="btn-secondary">Teklif Al</a>
     </div>
+    <div class="expand-hint" id="heroHint">AŞAĞI KAYDIR<span class="arrow"></span></div>
   </div>
-
-  <div class="hero-scroll">
-    <span>Keşfet</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
+</div>
 
 <!-- ===== HİZMETLER ===== -->
 <section id="hizmetler">
@@ -835,5 +796,6 @@
 </script>
 
 <script src="js/main.js"></script>
+<script src="js/hero.js" defer></script>
 </body>
 </html>
