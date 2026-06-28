@@ -156,6 +156,41 @@
   </div>
 </div>
 
+<!-- ===== AVANTAJLAR (Neden Hafif Çelik?) ===== -->
+<section id="avantajlar" class="adv-section">
+  <style>
+  .adv-section{padding:84px 5%;background:#F2F6FA}
+  .adv-inner{max-width:1180px;margin:0 auto}
+  .adv-head{text-align:center;max-width:680px;margin:0 auto 48px}
+  .adv-head .section-label{justify-content:center;color:#C2410C}
+  .adv-title{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;color:#13283d;margin:6px 0 12px;line-height:1.2}
+  .adv-sub{color:#51637A;font-size:1rem;line-height:1.6}
+  .adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .adv-card{background:#fff;border:1px solid #E1E8F0;border-radius:16px;padding:28px 24px;box-shadow:0 8px 24px rgba(13,27,42,.05);transition:transform .2s,box-shadow .2s,border-color .2s}
+  .adv-card:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(13,27,42,.10);border-color:#F4A261}
+  .adv-ico{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;background:linear-gradient(135deg,rgba(244,162,97,.16),rgba(231,111,81,.16));margin-bottom:16px}
+  .adv-card h3{font-size:1.12rem;font-weight:700;color:#13283d;margin:0 0 8px}
+  .adv-card p{font-size:.92rem;color:#51637A;line-height:1.6;margin:0}
+  @media(max-width:880px){.adv-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.adv-grid{grid-template-columns:1fr}.adv-section{padding:60px 5%}}
+  </style>
+  <div class="adv-inner">
+    <div class="adv-head">
+      <div class="section-label fade-up" data-i18n="adv_label">Neden Hafif Çelik?</div>
+      <h2 class="adv-title fade-up delay-1" data-i18n="adv_title">Betonarmeye Göre Gerçek Avantajlar</h2>
+      <p class="adv-sub fade-up delay-2" data-i18n="adv_sub">Hafif çelik yapı sistemleri; güvenlik, hız ve verimliliği bir arada sunar.</p>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card fade-up delay-1"><div class="adv-ico">🛡️</div><h3 data-i18n="adv1_t">Depreme Dayanıklı</h3><p data-i18n="adv1_d">Hafif yapı depremde daha az kuvvet çeker. Her proje TBDY 2018/2026'ya uygun mühendislikle tasarlanır.</p></div>
+      <div class="adv-card fade-up delay-2"><div class="adv-ico">🪶</div><h3 data-i18n="adv2_t">5–10× Daha Hafif</h3><p data-i18n="adv2_d">150–300 kg/m² ile betonarmenin çok altında. Temele ve zemine binen yük minimumda kalır.</p></div>
+      <div class="adv-card fade-up delay-3"><div class="adv-ico">⚡</div><h3 data-i18n="adv3_t">Haftalar İçinde Teslim</h3><p data-i18n="adv3_d">Fabrikasyon üretim ve kuru montaj sayesinde, aylarca süren inşaat yerine günler–haftalar.</p></div>
+      <div class="adv-card fade-up delay-1"><div class="adv-ico">🔥</div><h3 data-i18n="adv4_t">Yanmaz, Çürümez</h3><p data-i18n="adv4_d">Galvanizli çelik karkas yanmaz ve paslanmaz; çürümez, küf ve böcek tutmaz.</p></div>
+      <div class="adv-card fade-up delay-2"><div class="adv-ico">🌡️</div><h3 data-i18n="adv5_t">Yüksek Yalıtım</h3><p data-i18n="adv5_d">Taş yünü entegre panellerle güçlü ısı ve ses yalıtımı, daha düşük enerji faturası.</p></div>
+      <div class="adv-card fade-up delay-3"><div class="adv-ico">👷</div><h3 data-i18n="adv6_t">Mühendis Güvencesi</h3><p data-i18n="adv6_d">İki inşaat mühendisi tarafından kurulan MefSteel'de her projede imzalı statik hesap.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== HİZMETLER ===== -->
 <section id="hizmetler">
   <div class="services-header">
@@ -377,6 +412,16 @@
   .calc-result-note{font-size:.78rem;color:var(--gray);margin-top:10px;line-height:1.5}
   .calc-btn{display:block;text-align:center;margin-top:8px;padding:16px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:var(--white);font-weight:700;text-decoration:none;font-size:1.02rem;transition:var(--transition);box-shadow:0 6px 20px rgba(231,111,81,.35)}
   .calc-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(231,111,81,.5)}
+  /* metrekare slider */
+  .calc-area-val{display:inline-block;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;padding:2px 14px;border-radius:50px;font-size:.9rem;margin-left:8px;vertical-align:middle;box-shadow:0 3px 10px rgba(231,111,81,.3)}
+  .calc-field input.calc-range{-webkit-appearance:none;appearance:none;height:10px;padding:0;border:none;background:#E2E8F0;border-radius:50px;margin:12px 0 4px;cursor:pointer}
+  .calc-field input.calc-range:focus{outline:none}
+  .calc-range::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:grab;border:4px solid #fff;box-shadow:0 3px 12px rgba(231,111,81,.5);transition:transform .15s}
+  .calc-range::-webkit-slider-thumb:hover{transform:scale(1.15)}
+  .calc-range::-webkit-slider-thumb:active{cursor:grabbing;transform:scale(1.05)}
+  .calc-range::-moz-range-thumb{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));cursor:grab;border:4px solid #fff;box-shadow:0 3px 12px rgba(231,111,81,.5)}
+  .calc-range::-moz-range-track{height:10px;border-radius:50px;background:#E2E8F0}
+  .calc-range-scale{display:flex;justify-content:space-between;font-size:.74rem;color:var(--gray);margin-top:2px;font-weight:500}
   @media(max-width:640px){.calc-card{padding:22px}.calc-result-value{font-size:1.55rem}}
   </style>
   <div class="calc-inner">
@@ -385,8 +430,9 @@
     <p class="section-desc fade-up delay-2" style="text-align:center;max-width:620px;margin:0 auto 32px">Alanınızı ve paketi seçin, yaklaşık maliyet aralığını anında görün. Kesin fiyat için tek tıkla ücretsiz teklif alın.</p>
     <div class="calc-card fade-up delay-2">
       <div class="calc-field">
-        <label for="calcArea">Toplam İnşaat Alanı (m²)</label>
-        <input type="number" id="calcArea" min="10" max="2000" value="120" inputmode="numeric">
+        <label for="calcArea">Toplam İnşaat Alanı <span id="calcAreaVal" class="calc-area-val">120 m²</span></label>
+        <input type="range" id="calcArea" class="calc-range" min="20" max="500" step="5" value="120">
+        <div class="calc-range-scale"><span>20 m²</span><span>← sürükle →</span><span>500 m²</span></div>
       </div>
       <div class="calc-field">
         <label for="calcFloors">Kat Sayısı</label>
@@ -420,9 +466,17 @@
       pkg=document.getElementById('calcPkg'),val=document.getElementById('calcValue'),
       wa=document.getElementById('calcWhats');
   if(!area||!wa) return;
+  var areaVal=document.getElementById('calcAreaVal');
   function fmt(n){return '₺'+Math.round(n).toLocaleString('tr-TR');}
+  function sliderGuncelle(a){
+    if(areaVal) areaVal.textContent=a+' m²';
+    var mn=parseFloat(area.min)||0, mx=parseFloat(area.max)||100;
+    var pct=Math.max(0,Math.min(100,((a-mn)/(mx-mn))*100));
+    area.style.background='linear-gradient(90deg,var(--accent) 0%,var(--accent2) '+pct+'%,#E2E8F0 '+pct+'%,#E2E8F0 100%)';
+  }
   function hesapla(){
     var a=parseFloat(area.value)||0;
+    sliderGuncelle(a);
     if(a<=0){val.textContent='—';return;}
     var r=RATES[pkg.value]||RATES.ileri,k=parseInt(floors.value,10)||1;
     var lo=a*r[0],hi=a*r[1];
@@ -451,6 +505,7 @@
     <button class="gf-btn" data-cat="konut" data-i18n="filter_residential">Konut</button>
     <button class="gf-btn" data-cat="ticari" data-i18n="filter_commercial">Ticari</button>
     <button class="gf-btn" data-cat="endustriyel" data-i18n="filter_industrial">Endüstriyel</button>
+    <button class="gf-btn" data-cat="hibrit" data-i18n="filter_hybrid">Hibrit</button>
   </div>
 
   <!-- Fotoğraflar manifest.json'dan otomatik yüklenir -->
@@ -589,6 +644,27 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- ===== SAYILARLA MEFSTEEL ===== -->
+<section id="rakamlar" class="stats-section">
+  <style>
+  .stats-section{padding:66px 5%;background:linear-gradient(135deg,#0D1B2A,#13283d)}
+  .stats-head{text-align:center;color:#fff;font-size:.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#F4A261;margin-bottom:36px}
+  .stats-inner{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+  .stat-box{padding:10px}
+  .stat-num{font-size:clamp(2.1rem,5vw,3.1rem);font-weight:800;line-height:1}
+  .stat-num span{background:linear-gradient(135deg,#F4A261,#E76F51);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .stat-label{margin-top:10px;font-size:.9rem;color:#AEBCCD;font-weight:500;letter-spacing:.3px}
+  @media(max-width:680px){.stats-inner{grid-template-columns:repeat(2,1fr);gap:34px 16px}}
+  </style>
+  <div class="stats-head fade-up" data-i18n="stats_head">Sayılarla MefSteel</div>
+  <div class="stats-inner">
+    <div class="stat-box fade-up delay-1"><div class="stat-num"><span data-target="8" data-suffix="+">0+</span></div><div class="stat-label" data-i18n="stat1_l">Yıllık Saha Deneyimi</div></div>
+    <div class="stat-box fade-up delay-2"><div class="stat-num"><span data-target="7">0</span></div><div class="stat-label" data-i18n="stat2_l">Uçtan Uca Hizmet</div></div>
+    <div class="stat-box fade-up delay-3"><div class="stat-num"><span data-target="4">0</span></div><div class="stat-label" data-i18n="stat3_l">Proje Kategorisi</div></div>
+    <div class="stat-box fade-up delay-4"><div class="stat-num"><span data-target="100" data-suffix="%">0%</span></div><div class="stat-label" data-i18n="stat4_l">İmzalı Statik Hesap</div></div>
   </div>
 </section>
 

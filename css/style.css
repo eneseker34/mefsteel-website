@@ -2253,7 +2253,8 @@ footer {
 @media(max-width:768px){ .collage{grid-template-columns:repeat(3,1fr)} }
 
 /* ---- AÇIK TEMA: içerik bölümleri (değişken override → tüm alt öğeler çevrilir) ---- */
-body{ background:var(--bg-light); }
+/* NOT: açık zemin SADECE anasayfada (#paketler içeren body) — blog sayfaları koyu kalsın */
+body:has(#paketler){ background:var(--bg-light); }
 #hizmetler, #paketler, #hesaplama, #projeler, #blog-preview, #hakkimizda, #iletisim{
   --navy:#F5F8FB; --navy2:#FFFFFF; --steel:#EEF2F6;
   --gray:#51637A; --white:#13283d; --light:#13283d;
@@ -2276,3 +2277,120 @@ body{ background:var(--bg-light); }
 /* koyu için yapılmış sabit beyaz parlama hover'larını açık temaya uyarla */
 .service-card:hover{ background:#FFFFFF; }
 .pricing-card:hover{ background:#FFFFFF; }
+
+/* ---- AÇIK TEMA v2 ince ayar (2026-06-28): zeminleri tonla + buton/chip koyulaştır ---- */
+:root{ --bg-light:#E9EDF2; }
+body:has(#paketler){ background:#E9EDF2; }
+/* dönüşümlü zemin (daha az parlak), kartlar beyaz kalır → öne çıkar */
+#hizmetler{ background:#EEF2F7; }
+#paketler{ background:#E4E9F0; }
+#hesaplama{ background:#EEF2F7; }
+#projeler{ background:#E4E9F0; }
+#blog-preview{ background:#EEF2F7; }
+#hakkimizda{ background:#E4E9F0; }
+#iletisim{ background:#EEF2F7; }
+#hizmetler,#paketler,#hesaplama,#projeler,#blog-preview,#hakkimizda,#iletisim{ --glass:#FFFFFF; --glass-border:#DCE3EC; }
+
+/* buton/chip gibi ayrık öğeler daha koyu (kontrast) */
+#blog-preview .blog-card-tag{ background:var(--accent2); color:#fff; }      /* dolu, koyu turuncu chip */
+#blog-preview .blog-card-footer{ color:#C2410C; border-top-color:#DCE3EC; } /* koyu turuncu "Devamını Oku" */
+#hizmetler .service-arrow,
+#hizmetler .svc-detail-cta{ color:#C2410C; }
+#hizmetler .svc-detail-cta{ border-color:rgba(194,65,12,.35); }
+.section-label{ color:#C2410C; }                                           /* üst etiketler daha okunur */
+
+/* ---- BUTONLARI BELİRGİNLEŞTİR (açık tema, 2026-06-28) ---- */
+/* Paket "primary" (orta/öne çıkan kart): dolu turuncu marka gradyanı = net CTA (eski mavi kaldırıldı) */
+#paketler .pricing-btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;
+  box-shadow:0 6px 20px rgba(231,111,81,.40);
+}
+#paketler .pricing-btn-primary:hover{ box-shadow:0 10px 28px rgba(231,111,81,.55); }
+/* Paket "secondary" (yan kartlar): turuncu çerçeveli net buton, hover'da dolar (eski soluk beyaz kaldırıldı) */
+#paketler .pricing-btn-secondary{
+  background:#FCEadd;
+  color:#9A3412;
+  border:2px solid var(--accent2);
+  font-weight:700;
+}
+#paketler .pricing-btn-secondary:hover{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  color:#fff;
+  border-color:transparent;
+  box-shadow:0 8px 24px rgba(231,111,81,.40);
+}
+/* Galeri filtre butonu aktif/hover: turuncu üstünde beyaz yazı (açık temada --white koyu) */
+#projeler .gf-btn.active, #projeler .gf-btn:hover{ color:#fff; }
+
+/* ====== BLOG AÇIK TEMA (2026-06-28): yazı + liste sayfaları açık zemin + KOYU yazı ======
+   Navbar ve footer KOYU kalır (anasayfayla aynı). Değişken override → alt öğeler otomatik çevrilir.
+   Kapsam: yazı sayfaları (.post-page) + blog listesi (.blog-page). */
+body:has(.post-page), body:has(.blog-page){ background:#E9EDF2; }
+.post-page, .blog-page{
+  --navy:#F5F8FB; --navy2:#FFFFFF; --steel:#EEF2F6;
+  --gray:#51637A; --white:#13283d; --light:#13283d;
+  --glass:#FFFFFF; --glass-border:#E4EAF1;
+  color:#13283d;
+}
+/* sabit kodlu açık (beyaza yakın) yazı renklerini KOYU yap */
+.post-body, .post-body p, .post-body li, .post-callout p, .post-table td{ color:#33414F; }
+.post-body strong, .post-body h2, .post-title{ color:#13283d; }
+/* turuncu vurgular açık zeminde okunur olsun (koyu turuncu) */
+.post-body h3, .post-callout-title, .blog-card-footer{ color:#C2410C; }
+.post-tag, .blog-card-tag{ background:rgba(244,162,97,.18); color:#C2410C; }
+/* callout kutusu: açık turuncu dolgu, koyu çerçeve */
+.post-callout{ background:#FFF4EC; border-color:rgba(231,111,81,.30); }
+/* tablo: koyu navy başlık + beyaz yazı, açık şerit satırlar */
+.post-table th{ background:#13283d; color:#fff; }
+.post-table tr:nth-child(even) td{ background:#F5F8FB; }
+/* kartlar beyaz kalsın (öne çıksın) */
+.blog-card:hover{ background:#FFFFFF; }
+
+/* ====== PAKETLER KARTLARI AÇIK TEMA (2026-06-28): blog ile aynı mantık — net beyaz kart + KOYU yazı ====== */
+/* kart: soluk/şeffaf yerine net beyaz + görünür çerçeve + yumuşak gölge */
+#paketler .pricing-card{
+  background:#FFFFFF;
+  border:1px solid #DCE3EC;
+  box-shadow:0 8px 24px rgba(13,27,42,.06);
+}
+#paketler .pricing-card:hover{ border-color:var(--accent2); box-shadow:0 16px 36px rgba(13,27,42,.12); }
+/* öne çıkan (popüler) kart: beyaz + turuncu vurgu çerçeve (eski camgöbeği kaldırıldı) */
+#paketler .pricing-card-popular{
+  background:#FFFFFF;
+  border:2px solid var(--accent2);
+  box-shadow:0 16px 40px rgba(231,111,81,.16);
+}
+/* özellik listesi: beyaz yerine KOYU yazı (okunur) */
+#paketler .pricing-features{ color:#33414F; }
+/* tik ikonu: yeşil onay (eski camgöbeği kaldırıldı) */
+#paketler .check-icon{ color:#16A34A; }
+/* fiyat: okunur koyu turuncu */
+#paketler .pricing-price{ color:#C2410C; }
+/* ayraç çizgisi: açık zeminde görünür gri */
+#paketler .pricing-divider{ background:linear-gradient(90deg,transparent,#DCE3EC 30%,#C7D0DB 50%,#DCE3EC 70%,transparent); }
+
+/* ====== İLETİŞİM AÇIK TEMA (2026-06-28): blog/paket ile aynı — net form alanları + KOYU yazı ====== */
+/* form alanları: şeffaf yerine açık dolgu + görünür çerçeve (eski rgba beyaz kaldırıldı) */
+#iletisim .form-group input,
+#iletisim .form-group textarea,
+#iletisim .form-group select{
+  background:#F5F8FB;
+  border:1px solid #D3DBE5;
+  color:#13283d;
+}
+#iletisim .form-group input:focus,
+#iletisim .form-group textarea:focus,
+#iletisim .form-group select:focus{
+  background:#FFFFFF;
+  border-color:var(--accent2);
+  box-shadow:0 0 0 3px rgba(231,111,81,.12);
+}
+#iletisim .form-group select option{ background:#FFFFFF; color:#13283d; }
+/* yer-tutucu yazı okunur gri */
+#iletisim .form-group input::placeholder,
+#iletisim .form-group textarea::placeholder{ color:#8A98A8; }
+/* üst etiketler + ikincil linkler okunur koyu turuncu */
+#iletisim .contact-item-title, #iletisim .map-link, #iletisim .form-success{ color:#C2410C; }
+/* form kartı net görünür gölge */
+#iletisim .contact-form{ box-shadow:0 10px 30px rgba(13,27,42,.08); }
