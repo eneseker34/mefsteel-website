@@ -42,6 +42,7 @@
   var isM = window.innerWidth < 768;
   function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
   function onScroll() {
+    if (isM) return; // mobilde scroll-expand kapali — CSS sade hero devrede
     var rect = wrap.getBoundingClientRect();
     var total = wrap.offsetHeight - window.innerHeight;
     var p = clamp(-rect.top / total, 0, 1);

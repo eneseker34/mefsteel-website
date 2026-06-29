@@ -2250,7 +2250,19 @@ footer {
 .expand-hint{position:absolute;z-index:3;bottom:30px;left:0;width:100%;text-align:center;color:#dce6f0;font-size:.76rem;letter-spacing:1px}
 .expand-hint .arrow{display:block;margin:9px auto 0;width:20px;height:20px;border-right:2px solid #dce6f0;border-bottom:2px solid #dce6f0;transform:rotate(45deg);animation:heroBob 1.6s ease-in-out infinite}
 @keyframes heroBob{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(4px,4px)}}
-@media(max-width:768px){ .collage{grid-template-columns:repeat(3,1fr)} }
+@media(max-width:768px){
+  /* Mobilde scroll-expand KAPALI: sade tek-ekran hero (300vh sticky kaynakli "acilmama" sorunu cozumu) */
+  .expand-wrap{height:auto !important}
+  .expand-sticky{position:relative !important;min-height:90vh;flex-direction:column;justify-content:center;padding:104px 20px 56px}
+  .stage{position:absolute !important;inset:0;width:100% !important;height:100% !important;border-radius:0 !important;box-shadow:none;z-index:1}
+  .collage{display:none}
+  .expand-title{position:relative;top:auto;transform:none !important;flex-direction:column;gap:6px;z-index:3}
+  #heroT1,#heroT2{transform:none !important}
+  .expand-title span{font-size:clamp(1.9rem,8.5vw,2.8rem)}
+  .expand-sub{position:relative;top:auto;margin-top:18px;z-index:3;opacity:1 !important}
+  .expand-cta{position:relative;top:auto;margin-top:24px;z-index:3;opacity:1 !important}
+  .expand-hint{display:none}
+}
 
 /* ---- AÇIK TEMA: içerik bölümleri (değişken override → tüm alt öğeler çevrilir) ---- */
 /* NOT: açık zemin SADECE anasayfada (#paketler içeren body) — blog sayfaları koyu kalsın */
