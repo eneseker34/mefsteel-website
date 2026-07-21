@@ -34,6 +34,52 @@
     window.BLOG_CURRENT_LANG = 'tr';
   </script>
   <script src="/js/blog-lang-switcher.js" defer></script>
+  <style>
+    .blog-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 28px 0 4px;
+    }
+    .blog-filter-btn {
+      font-family: inherit;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--gray);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 50px;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+    .blog-filter-btn:hover {
+      color: var(--white);
+      border-color: var(--accent);
+    }
+    .blog-filter-btn .cnt {
+      opacity: 0.6;
+      font-weight: 500;
+      margin-left: 4px;
+    }
+    .blog-filter-btn.active {
+      background: var(--accent);
+      color: #0D1B2A;
+      border-color: var(--accent);
+    }
+    .blog-filter-btn.active .cnt { opacity: 0.75; }
+    .blog-card.is-hidden { display: none; }
+    .blog-no-results {
+      display: none;
+      text-align: center;
+      color: var(--gray);
+      padding: 48px 0;
+      font-size: 1rem;
+    }
+    .blog-no-results.show { display: block; }
+  </style>
 </head>
 <body>
 
@@ -61,9 +107,19 @@
     Hafif çelik yapı sistemleri, statik hesap ve 2026 yönetmeliği hakkında uzman ekibimizden güncel içerikler.
   </p>
 
+  <div class="blog-filters" id="blog-filters" role="tablist" aria-label="Blog kategorileri">
+    <button class="blog-filter-btn active" data-filter="all" aria-pressed="true">Tümü <span class="cnt">23</span></button>
+    <button class="blog-filter-btn" data-filter="karsilastirma" aria-pressed="false">Karşılaştırma <span class="cnt">4</span></button>
+    <button class="blog-filter-btn" data-filter="teknik" aria-pressed="false">Teknik <span class="cnt">8</span></button>
+    <button class="blog-filter-btn" data-filter="fiyat" aria-pressed="false">Fiyat &amp; Yatırım <span class="cnt">2</span></button>
+    <button class="blog-filter-btn" data-filter="surec" aria-pressed="false">Süreç &amp; Ruhsat <span class="cnt">3</span></button>
+    <button class="blog-filter-btn" data-filter="yapi" aria-pressed="false">Yapı Tipleri <span class="cnt">4</span></button>
+    <button class="blog-filter-btn" data-filter="projeler" aria-pressed="false">Projeler <span class="cnt">2</span></button>
+  </div>
+
   <div class="blog-page-grid">
 
-    <a href="/blog/prefabrik-mi-hafif-celik-mi.html" class="blog-card">
+    <a href="/blog/prefabrik-mi-hafif-celik-mi.html" class="blog-card" data-cat="karsilastirma">
       <img src="/images/projeler/konut/mefsteel-proje-025.jpg" alt="Prefabrik ev ile hafif çelik ev karşılaştırması konteyner beton panel" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -79,7 +135,7 @@
       </div>
     </a>
 
-    <a href="/blog/betonarme-binalarda-hafif-celik-duvar.html" class="blog-card">
+    <a href="/blog/betonarme-binalarda-hafif-celik-duvar.html" class="blog-card" data-cat="teknik">
       <img src="/images/projeler/hibrit/hibrit-yapi-03.jpg" alt="Betonarme binada tuğla yerine hafif çelik dolgu ve bölme duvar" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -95,7 +151,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-dis-cephe-kaplama.html" class="blog-card">
+    <a href="/blog/hafif-celik-dis-cephe-kaplama.html" class="blog-card" data-cat="teknik">
       <img src="/images/projeler/konut/mefsteel-proje-090.jpg" alt="Hafif çelik ev dış cephe kaplama mantolama siding taş" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -111,7 +167,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-temel-ve-zemin-etudu.html" class="blog-card">
+    <a href="/blog/hafif-celik-temel-ve-zemin-etudu.html" class="blog-card" data-cat="teknik">
       <img src="/images/about-work-2.jpg" alt="Hafif çelik ev radye temel ve zemin etüdü inşaat" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -127,7 +183,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-bahce-evi-tiny-house.html" class="blog-card">
+    <a href="/blog/hafif-celik-bahce-evi-tiny-house.html" class="blog-card" data-cat="yapi">
       <img src="/images/projeler/konut/ma-tiny-house-03.jpg" alt="Hafif çelik bahçe evi tiny house bağ evi ofis kabini" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -143,7 +199,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-kat-ilavesi.html" class="blog-card">
+    <a href="/blog/hafif-celik-kat-ilavesi.html" class="blog-card" data-cat="yapi">
       <img src="/images/about-work-2.jpg" alt="Hafif çelik kat ilavesi mevcut bina üstüne kat çıkma" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -159,7 +215,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-modelleri.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-modelleri.html" class="blog-card" data-cat="yapi">
       <img src="/images/projeler/konut/mefsteel-proje-145.jpg" alt="Hafif çelik ev modelleri 1+1 2+1 villa gerçek projeler" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -175,7 +231,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-ruhsat-izin.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-ruhsat-izin.html" class="blog-card" data-cat="surec">
       <img src="/images/about-work-2.jpg" alt="Hafif çelik ev ruhsat ve izin süreci yapı ruhsatı" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -191,7 +247,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-yalitim.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-yalitim.html" class="blog-card" data-cat="teknik">
       <img src="/images/projeler/konut/mefsteel-proje-040.jpg" alt="Hafif çelik ev ısı ve ses yalıtımı mineral yün uygulaması" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -207,7 +263,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-resimleri-gercek-projeler.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-resimleri-gercek-projeler.html" class="blog-card" data-cat="projeler">
       <img src="/images/projeler/konut/mefsteel-proje-050.jpg" alt="MefSteel gerçek hafif çelik ev projesi fotoğrafı" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -223,7 +279,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-deprem-dayanikliligi.html" class="blog-card">
+    <a href="/blog/hafif-celik-deprem-dayanikliligi.html" class="blog-card" data-cat="teknik">
       <img src="/images/projeler/konut/mefsteel-proje-100.jpg" alt="Hafif çelik yapı çelik iskelet deprem performansı" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -239,7 +295,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-yonetmeligi-2026.html" class="blog-card">
+    <a href="/blog/hafif-celik-yonetmeligi-2026.html" class="blog-card" data-cat="teknik">
       <img src="/images/projeler/konut/mefsteel-proje-015.jpg" alt="2026 hafif çelik yapı yönetmeliği inşaat projesi" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -255,7 +311,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-fiyatlari-2026.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-fiyatlari-2026.html" class="blog-card" data-cat="fiyat">
       <img src="/images/projeler/konut/mefsteel-proje-075.jpg" alt="Hafif çelik ev fiyatları 2026 gerçek proje" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -271,7 +327,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-yapim-sureci.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-yapim-sureci.html" class="blog-card" data-cat="surec">
       <img src="/images/projeler/konut/mefsteel-proje-030.jpg" alt="Hafif çelik ev yapım süreci inşaat aşaması" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -287,7 +343,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-sss.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-sss.html" class="blog-card" data-cat="surec">
       <img src="/images/projeler/konut/mefsteel-proje-150.jpg" alt="Hafif çelik ev sık sorulan sorular" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -303,7 +359,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-omru-ve-bakimi.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-omru-ve-bakimi.html" class="blog-card" data-cat="teknik">
       <img src="/images/projeler/konut/mefsteel-proje-180.jpg" alt="Hafif çelik ev ömrü ve bakımı uzun ömürlü proje" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -319,7 +375,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-mi-betonarme-mi.html" class="blog-card">
+    <a href="/blog/hafif-celik-mi-betonarme-mi.html" class="blog-card" data-cat="karsilastirma">
       <img src="/images/projeler/konut/mefsteel-proje-120.jpg" alt="Hafif çelik mi betonarme mi karşılaştırma" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -335,7 +391,7 @@
       </div>
     </a>
 
-    <a href="/blog/trakya-istanbul-avrupa-hafif-celik.html" class="blog-card">
+    <a href="/blog/trakya-istanbul-avrupa-hafif-celik.html" class="blog-card" data-cat="projeler">
       <img src="/images/projeler/konut/mefsteel-proje-060.jpg" alt="Trakya İstanbul Avrupa yakası hafif çelik ev projesi" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -351,7 +407,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-ev-yatirim-geri-donus.html" class="blog-card">
+    <a href="/blog/hafif-celik-ev-yatirim-geri-donus.html" class="blog-card" data-cat="fiyat">
       <img src="/images/projeler/konut/mefsteel-proje-110.jpg" alt="Hafif çelik ev yatırım geri dönüş süresi hesabı" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -367,7 +423,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-tek-katli-mi-iki-katli-mi.html" class="blog-card">
+    <a href="/blog/hafif-celik-tek-katli-mi-iki-katli-mi.html" class="blog-card" data-cat="karsilastirma">
       <img src="/images/projeler/konut/mefsteel-proje-085.jpg" alt="Hafif çelik tek katlı mı iki katlı mı ev tasarımı" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -383,7 +439,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-cati-secenekleri.html" class="blog-card">
+    <a href="/blog/hafif-celik-cati-secenekleri.html" class="blog-card" data-cat="teknik">
       <img src="/images/projeler/konut/mefsteel-proje-055.jpg" alt="Hafif çelik çatı seçenekleri kiremit trapez sandviç panel" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -399,7 +455,7 @@
       </div>
     </a>
 
-    <a href="/blog/betonarme-hafif-celik-hibrit.html" class="blog-card">
+    <a href="/blog/betonarme-hafif-celik-hibrit.html" class="blog-card" data-cat="karsilastirma">
       <img src="/images/projeler/hibrit/hibrit-yapi-07.jpg" alt="Betonarme iskelet hafif çelik duvar hibrit yapı sistemi villa projesi" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -415,7 +471,7 @@
       </div>
     </a>
 
-    <a href="/blog/hafif-celik-garaj-depo.html" class="blog-card">
+    <a href="/blog/hafif-celik-garaj-depo.html" class="blog-card" data-cat="yapi">
       <img src="/images/projeler/endustriyel/putzmeister-ofis-01.jpg" alt="Hafif çelik garaj ve depo yapısı çelik konstrüksiyon" class="blog-card-img" loading="lazy">
       <div class="blog-card-body">
         <div class="blog-card-meta">
@@ -432,6 +488,8 @@
     </a>
 
   </div>
+
+  <div class="blog-no-results" id="blog-no-results">Bu kategoride henüz yazı yok.</div>
 </main>
 
 <footer>
@@ -467,6 +525,44 @@ document.querySelector('.hamburger').addEventListener('click', function() {
   document.querySelector('nav').classList.toggle('open');
   this.classList.toggle('open');
 });
+
+// Blog kategori filtresi
+(function(){
+  const buttons = document.querySelectorAll('.blog-filter-btn');
+  const cards = document.querySelectorAll('.blog-page-grid .blog-card');
+  const noResults = document.getElementById('blog-no-results');
+  if (!buttons.length || !cards.length) return;
+
+  function applyFilter(cat) {
+    let visible = 0;
+    cards.forEach(card => {
+      const show = cat === 'all' || card.getAttribute('data-cat') === cat;
+      card.classList.toggle('is-hidden', !show);
+      if (show) visible++;
+    });
+    buttons.forEach(btn => {
+      const on = btn.getAttribute('data-filter') === cat;
+      btn.classList.toggle('active', on);
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    if (noResults) noResults.classList.toggle('show', visible === 0);
+  }
+
+  buttons.forEach(btn => btn.addEventListener('click', function() {
+    const cat = this.getAttribute('data-filter');
+    applyFilter(cat);
+    if (cat === 'all') {
+      history.replaceState(null, '', location.pathname);
+    } else {
+      history.replaceState(null, '', '#' + cat);
+    }
+  }));
+
+  // URL hash ile derin bağlantı: /blog/#teknik gibi
+  const valid = Array.from(buttons).map(b => b.getAttribute('data-filter'));
+  const initial = location.hash.replace('#', '');
+  if (initial && valid.includes(initial)) applyFilter(initial);
+})();
 </script>
 </body>
 </html>
