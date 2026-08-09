@@ -2243,7 +2243,7 @@ footer {
 .stage .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.1s ease}
 .stage .slide.on{opacity:1}
 .stage::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.4))}
-.expand-title{position:absolute;z-index:3;top:50%;left:0;width:100%;transform:translateY(-50%);display:flex;justify-content:center;gap:26px;pointer-events:none;flex-wrap:wrap;padding:0 16px}
+.expand-title{position:absolute;z-index:3;top:50%;left:0;width:100%;transform:translateY(-50%);display:flex;justify-content:center;gap:26px;pointer-events:none;flex-wrap:wrap;padding:0 16px;margin:0;font-weight:inherit}
 .expand-title span{font-size:clamp(2rem,6vw,4.4rem);font-weight:800;letter-spacing:-1px;color:#fff;text-shadow:0 2px 34px rgba(0,0,0,.55);white-space:nowrap;will-change:transform}
 .expand-sub{position:absolute;z-index:3;top:calc(50% + 64px);left:0;width:100%;text-align:center;color:#cdd9e6;font-size:clamp(.9rem,1.6vw,1.1rem);padding:0 20px}
 .expand-cta{position:absolute;z-index:3;top:calc(50% + 116px);left:0;width:100%;display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:0 20px}
