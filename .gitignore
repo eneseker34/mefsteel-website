@@ -7,3 +7,7 @@ desktop.ini
 .gstack/
 
 .vercel
+
+# guncelle.ps1 "git add ." yapiyor -> asagidakiler yanlislikla canliya cikmasin
+preview-*.html
+scratchpad/

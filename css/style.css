@@ -661,6 +661,13 @@ section { padding: 100px 5%; }
   grid-row: span 2;
 }
 
+/* Galeri gorselleri <picture> ile sarili (webp + jpg yedek). <picture> varsayilan
+   olarak inline'dir; yukseklik zincirinin kirilmamasi icin block + tam boyut verildi. */
+.gallery-item picture {
+  display: block;
+  width: 100%; height: 100%;
+}
+
 .gallery-item img {
   width: 100%; height: 100%;
   object-fit: cover;

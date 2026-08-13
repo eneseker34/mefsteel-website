@@ -498,6 +498,24 @@ const GALERI_LIMIT = 24; // İlk yükleme limiti
 let tumProjeler = [];
 let mevcutKat = 'tumu';
 
+// Her galeri fotografinin yaninda ayni isimde .webp kopyasi uretiliyor (guncelle.ps1).
+// <picture> ile sunulunca tarayici destekliyorsa webp'i, desteklemiyorsa jpg'yi iner
+// (~%35 daha az veri). Disaridan gelen http adreslerinde webp kopya yok -> duz <img>.
+function galeriGorsel(img, alt) {
+  const guvenliAlt = alt || 'MefSteel hafif çelik proje';
+  // closest ile ariyoruz: <picture> sarili olanda img'nin ustunde bir katman daha var,
+  // http adreslerinde ise yok. Sabit parentNode zinciri ikisinde ayni yere dusmez.
+  const yedek = `onerror="this.onerror=null;var k=this.closest('.gallery-item');if(k)k.style.background='#1E3A5F'"`;
+  if (img.startsWith('http')) {
+    return `<img src="${img}" alt="${guvenliAlt}" loading="lazy" ${yedek}>`;
+  }
+  const webp = img.replace(/\.(jpe?g|png)$/i, '.webp');
+  return `<picture>
+        <source srcset="${webp}" type="image/webp">
+        <img src="${img}" alt="${guvenliAlt}" loading="lazy" ${yedek}>
+      </picture>`;
+}
+
 function renderGalleryItems(projects) {
   const grid = document.getElementById('gallery-grid');
   if (!grid) return;
@@ -513,7 +531,7 @@ function renderGalleryItems(projects) {
     const desc = p.aciklama || 'Hafif çelik yapı projesi';
     const big  = i === 0 ? ' big' : '';
     return `<div class="gallery-item${big}" data-cat="${kat}" data-img="${img}" data-title="${isim}" data-desc="${desc}" style="animation-delay:${(i % 12) * 0.06}s">
-      <img src="${img}" alt="${isim}" loading="lazy" onerror="this.parentNode.style.background='#1E3A5F'">
+      ${galeriGorsel(img, isim)}
       <div class="gi-overlay">
         <div class="gi-tag">${tag}</div>
         <div class="gi-title">${isim}</div>
@@ -550,7 +568,7 @@ function galeriTumunu() {
     const kat = p.kategori || 'konut';
     const big = i === 0 ? ' big' : '';
     return `<div class="gallery-item${big}" data-cat="${kat}" data-img="${img}" style="animation-delay:${(i % 12) * 0.06}s">
-      <img src="${img}" alt="${p.isim}" loading="lazy" onerror="this.parentNode.style.background='#1E3A5F'">
+      ${galeriGorsel(img, p.isim)}
       <div class="gi-overlay"><div class="gi-tag">${KAT[kat]||'Proje'}</div><div class="gi-title">${p.isim}</div></div>
     </div>`;
   }).join('');
