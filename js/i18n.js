@@ -70,6 +70,13 @@ function buildLangSwitcher() {
     opt.dataset.lang = code;
     opt.innerHTML = `${flag} ${label}`;
     opt.addEventListener('click', () => {
+      // Cevirisi olmayan sayfalarda (lokasyon sayfalari) dil secimi
+      // ziyaretciyi o dildeki anasayfaya goturur - buton bos durmaz.
+      if (window.LANG_HOME_REDIRECT && code !== 'tr') {
+        localStorage.setItem('mefsteel_lang', code);
+        window.location.href = '/';
+        return;
+      }
       loadLang(code);
       dropdown.classList.remove('open');
     });
@@ -93,5 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('mefsteel_lang');
   const browser = (navigator.language || 'tr').split('-')[0];
   const initial = saved || (LANGS[browser] ? browser : 'tr');
+  if (window.LANG_HOME_REDIRECT) {
+    // Sayfa yalnizca Turkce: butonu TR goster, kayitli tercihi bozma.
+    currentLang = 'tr';
+    updateLangSwitcher();
+    return;
+  }
   loadLang(initial);
 });
