@@ -19,7 +19,21 @@
 # DIKKAT: Bu dosya UTF-8 BOM ile kaydedilmelidir - yoldaki "ŞİRKET" kelimesi
 # Turkce harf icerir ve PowerShell 5.1 BOM'suz dosyayi ANSI sanip bozar.
 $WEBSITE = "C:\mefsteel-website"
-$PYTHON  = "C:\Users\Enes\AppData\Local\Programs\Python\Python312\python.exe"
+
+# Python'u SABIT YOLA BAGLAMA. Eski surumde "C:\Users\Enes\..." yaziyordu; PC
+# degisince (kullanici adi artik "pc") bu yol kayboldu ve betik hic calismadi.
+# Once PATH'ten ara, bulamazsa bu kullanicinin standart kurulum yerine bak.
+$PYTHON = (Get-Command python -ErrorAction SilentlyContinue).Source
+if (-not $PYTHON) {
+    $aday = Join-Path $env:LOCALAPPDATA "Programs\Python\Python312\python.exe"
+    if (Test-Path $aday) { $PYTHON = $aday }
+}
+if (-not $PYTHON) {
+    Write-Host "   [HATA] Python bulunamadi. python.org'dan kurun veya PATH'e ekleyin." -ForegroundColor Red
+    Write-Host "Devam etmek icin bir tusa basin..." -ForegroundColor Gray
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    exit 1
+}
 
 Write-Host ""
 Write-Host "=====================================" -ForegroundColor Cyan
