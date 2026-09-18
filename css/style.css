@@ -29,7 +29,9 @@ body {
   background: var(--navy);
   color: var(--light);
   line-height: 1.6;
-  overflow-x: hidden;
+  /* clip (hidden degil): hidden body'yi kaydirma kabi yapip hero'daki
+     position:sticky'yi bozuyordu -> asagi inisde 2 ekran bos beyaz alan. */
+  overflow-x: clip;
 }
 
 /* ===== SCROLLBAR ===== */
